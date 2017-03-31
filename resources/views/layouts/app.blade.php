@@ -30,10 +30,53 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li id="inicio"><a href="#">Inicio</a></li>
-                        <li id="catalogos"><a href="#">Catalogos</a></li>
-                        <li id="movimientos"><a href="#">Movimientos</a></li>
-                        <li id="reportes"><a href="#">Reportes</a></li>
-                        <li id="utilerias"><a href="#">Utilerias</a></li>
+                        <li class="dropdown" id="catalogos">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Catalogos
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li id="fraccionamientos"><a href="#">Fraccionamiento</a></li>
+                                <li id="clientes"><a href="#">Clientes</a></li>
+                                <li id="vendedores"><a href="#">Vendedores</a></li>
+                                <li id="usuarios"><a href="#">Usuarios</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="movimientos">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Movimientos
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li id="solicitudes"><a href="#">Solicitudes</a></li>
+                                <li id="pago_solicitudes"><a href="#">Pago de Solicitudes</a></li>
+                                <li id="contratos"><a href="#">Contratos</a></li>
+                                <li id="pagos_mensuales"><a href="#">Pago de Mensualidades</a></li>
+                                <li id="mensualidades_vencidas"><a href="#">Mensualidades Vencidas</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reportes">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Reportes
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li id="lista_solicitudes"><a href="#">Lista de Solicitudes</a></li>
+                                <li id="saldos"><a href="#">Saldos</a></li>
+                                <li id="estado_cuenta"><a href="#">Estado de Cuenta</a></li>
+                                <li id="saldos_vencidos"><a href="#">Saldos Vencidos</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="utilerias">
+                            <a class="dropdown-toogle" data-toggle="dropdown" href="#">
+                                Utilerias
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li id="respaldar_info"><a href="#">Respaldar Informacion</a></li>
+                                <li id="regenerar_indices"><a href="#">Regenerar Indices</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Mi cuenta</a></li>

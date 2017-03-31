@@ -4,6 +4,8 @@
     Inicio
 @endsection
 
-@section('cabecera')
-    Century 21
+@section('container')
+    <script type="text/javascript">
+        $('#inicio').attr('class', 'active');
+    </script>
 @endsection

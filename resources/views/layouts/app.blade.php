@@ -37,7 +37,8 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li id="fraccionamientos"><a href="#">Fraccionamiento</a></li>
-                                <li id="clientes"><a href="#">Clientes</a></li>
+
+                                <li id="clientes"><a href="{{ url('/catalogos/clientes') }}">Clientes</a></li>
                                 <li id="vendedores"><a href="#">Vendedores</a></li>
                                 <li id="usuarios"><a href="#">Usuarios</a></li>
                             </ul>

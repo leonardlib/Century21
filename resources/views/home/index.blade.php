@@ -1,8 +1,5 @@
 @extends('layouts.app')
 
-@section('titulo')
-    Inicio
-@endsection
 @section('container')
     
     <script type="text/javascript">

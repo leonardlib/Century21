@@ -1,10 +1,6 @@
 @extends('layouts.app')
 
-@section('titulo')
-    Inicio
-@endsection
-
-<link href="{{ asset('/css/index/index.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('/css/clientes/index.css') }}" rel="stylesheet" type="text/css" />
 @section('container')
     <div class="container bs-docs-container" id="cont1" >
 	<div class="row">

@@ -15,12 +15,12 @@
  * Ruta inicial hacia la vista donde
  * los usuarios se registran o inician sesion.
  */
-//Route::get('/', 'LoginController@index');
+Route::get('/', 'LoginController@index');
 
 /**
  * Ruta hacia la pagina de inicio una vez iniciada una sesion.
  */
-Route::get('/', function () {
+Route::get('/inicio', function () {
     return view('home.index');
 });
 

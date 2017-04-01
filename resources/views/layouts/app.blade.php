@@ -3,16 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>@yield('titulo')</title>
+        <title>Century 21</title>
+        <link rel="icon" href="{{url('/img/logo.png')}}">
         <link rel="stylesheet" href="{{url('/css/bootstrap-3/css/bootstrap.css')}}">
+        <link rel="stylesheet" href="{{url('/css/estilos.css')}}">
         <script src="{{url('/js/jquery-3.2.0.js')}}"></script>
         <script src="{{url('/css/bootstrap-3/js/bootstrap.js')}}"></script>
-        <style>
-            #logo {
-                background: #000000;
-                margin: 0;
-            }
-        </style>
     </head>
     <body>
         <div class="jumbotron" align="center" id="logo">
@@ -81,7 +77,7 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Mi cuenta</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
+                        <li><a href="{{url('/')}}"><span class="glyphicon glyphicon-log-in"></span> Salir</a></li>
                     </ul>
                 </div>
             </div>

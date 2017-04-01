@@ -1,0 +1,20 @@
+.header {
+		background-color: #337ab7;
+		padding: 0.5em;
+	}
+	h1 {
+		color: #fff;
+
+	}
+	#sub_titulo {
+		color: #d9edf7;
+	}
+	
+
+	label {
+	    font-family: sans, Arial, sans-serif;
+		font-weight: 500;
+		font-size: 13px;
+    	line-height: 1.42857143;
+    	color: #555;
+	}

@@ -47,7 +47,7 @@
 				  	<div class="form-group">
 			    		<label for="inputTelefono" class="col-sm-4 control-label">Colonia</label>
 			    	<div class="col-sm-8">
-			      		<input type="text" class="form-control" id="inputTelefono" placeholder="Telefono">
+			      		<input type="text" class="form-control" id="inputTelefono" placeholder="Colonia">
 			    	</div>
 			  		</div>
 				  </div>
@@ -75,9 +75,9 @@
 		  	<div class="row">
 				  <div class="col-md-6">
 				  	<div class="form-group">
-			    		<label for="inputCalle" class="col-sm-4 control-label">IFF</label>
+			    		<label for="inputCalle" class="col-sm-4 control-label">IFE</label>
 			    	<div class="col-sm-8">
-			      		<input type="text" class="form-control" id="inputCalle" placeholder="Calle">
+			      		<input type="text" class="form-control" id="inputCalle" placeholder="IFE">
 			    	</div>
 			  		</div>
 				  </div>
@@ -85,7 +85,7 @@
 				  	<div class="form-group">
 			    		<label for="inputTelefono" class="col-sm-4 control-label">Algo</label>
 			    	<div class="col-sm-8">
-			      		<input type="text" class="form-control" id="inputTelefono" placeholder="Telefono">
+			      		<input type="text" class="form-control" id="inputTelefono" placeholder="Algo">
 			    	</div>
 			  		</div>
 			  		<br><br>
@@ -93,7 +93,7 @@
 		  	</div>
 			<div class="panel-footer">
               <div align="right">
-                <button class="btn btn-default">Guardar Registro</button>
+                <button class="btn btn-warning">Guardar Registro</button>
               </div>
         	</div> 
 		  	

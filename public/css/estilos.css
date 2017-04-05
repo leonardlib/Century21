@@ -84,6 +84,8 @@
 }
 /* Fin estilo pagina de Login */
 
+
+/* Estilos para formularios */
 .form-titulo{
     background: #222222;
     margin: 0 0 -0.5%;
@@ -96,8 +98,36 @@
     color: #9d9d9d;
 }
 
+.panel-default {
+    border-color: #9d9d9d;
+}
+
 .panel-default > .panel-heading {
     color: #131212;
     background-color: #222222;
-    border-color: #ddd;
+    border-color: #9d9d9d;
 }
+
+
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 4px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #222;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #dadada;
+}
+/*Fin de estilos para formularios*/

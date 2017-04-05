@@ -47,7 +47,7 @@
 				  	<div class="form-group">
 			    		<label for="inputTelefono" class="col-sm-4 control-label">Colonia</label>
 			    	<div class="col-sm-8">
-			      		<input type="text" class="form-control" id="inputTelefono" placeholder="Telefono">
+			      		<input type="text" class="form-control" id="inputTelefono" placeholder="Colonia">
 			    	</div>
 			  		</div>
 				  </div>
@@ -75,9 +75,9 @@
 		  	<div class="row">
 				  <div class="col-md-6">
 				  	<div class="form-group">
-			    		<label for="inputCalle" class="col-sm-4 control-label">IFF</label>
+			    		<label for="inputCalle" class="col-sm-4 control-label">IFE</label>
 			    	<div class="col-sm-8">
-			      		<input type="text" class="form-control" id="inputCalle" placeholder="Calle">
+			      		<input type="text" class="form-control" id="inputCalle" placeholder="IFE">
 			    	</div>
 			  		</div>
 				  </div>
@@ -85,58 +85,90 @@
 				  	<div class="form-group">
 			    		<label for="inputTelefono" class="col-sm-4 control-label">Algo</label>
 			    	<div class="col-sm-8">
-			      		<input type="text" class="form-control" id="inputTelefono" placeholder="Telefono">
+			      		<input type="text" class="form-control" id="inputTelefono" placeholder="Algo">
 			    	</div>
 			  		</div>
+			  		<br><br>
 				  </div>
 		  	</div>
-
-		  	<div class="row">
-		  		<div class="col-md-2">
-				  	<button type="button" class="btn btn-default btn-block" id="borrar">Borrar Registro</button>
-			  	</div>
-			  	<div class="col-md-2">
-				  	<button type="button" class="btn btn-primary btn-block" id="calcular">Calcular Mensualidades</button>
-			  	</div>
-			  	<div class="col-md-2">
-				  	<button type="button" class="btn btn-default btn-block" id="borrar">Borrar Registro</button>
-			  	</div>
-			  	<div class="col-md-2">
-				  	<button type="button" class="btn btn-primary btn-block" id="calcular">Calcular Mensualidades</button>
-			  	</div>
-			  	<div class="col-md-2">
-				  	<button type="button" class="btn btn-default btn-block" id="borrar">Borrar Registro</button>
-			  	</div>
-			  	<div class="col-md-2">
-				  	<button type="button" class="btn btn-primary btn-block" id="calcular">Calcular Mensualidades</button>
-			  	</div>
-			  	<div class="col-md-2">
-				  	<button type="button" class="btn btn-default btn-block" id="borrar">Borrar Registro</button>
-			  	</div>
-			  	<div class="col-md-2">
-				  	<button type="button" class="btn btn-primary btn-block" id="calcular">Calcular Mensualidades</button>
-			  	</div>
-			  	<div class="col-md-2">
-				  	<button type="button" class="btn btn-default btn-block" id="borrar">Borrar Registro</button>
-			  	</div>
-			  	<div class="col-md-2">
-				  	<button type="button" class="btn btn-primary btn-block" id="calcular">Calcular Mensualidades</button>
-			  	</div>
-			  	<div class="col-md-2">
-				  	<button type="button" class="btn btn-default btn-block" id="borrar">Borrar Registro</button>
-			  	</div>
-			  	<div class="col-md-2">
-				  	<button type="button" class="btn btn-primary btn-block" id="calcular">Calcular Mensualidades</button>
-			  	</div>
-		  	</div>
-
-				</div> 
-			</div>
-			
-
+			<div class="panel-footer">
+              <div align="right">
+                <button class="btn btn-warning">Guardar Registro</button>
+              </div>
+        	</div> 
 		  	
-			</form>
-			
+
+		</div> 
+	</div>
+</form>
+
+<div class="panel panel-default"> <div class="panel-heading"><h3 class="panel-title">Clientes Registrados</h3></div> 
+	<div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Telefono</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0001</td>
+                  <td>Luis Alberto</td>
+                  <td>344 456 54 54</td>
+                  <td><button type="button" class="btn btn-success">Editar</button></td>
+                  <td><button type="button" class="btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-remove"></i></button></td>
+                </tr>
+                <tr>
+                  <td>0001</td>
+                  <td>Luis Alberto</td>
+                  <td>344 456 54 54</td>
+                  <td><button type="button" class="btn btn-success">Editar</button></td>
+                  <td><button type="button" class="btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-remove"></i></button></td>
+                </tr>
+                <tr>
+                  <td>0001</td>
+                  <td>Luis Alberto</td>
+                  <td>344 456 54 54</td>
+                  <td><button type="button" class="btn btn-success">Editar</button></td>
+                  <td><button type="button" class="btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-remove"></i></button></td>
+                </tr>
+                <tr>
+                  <td>0001</td>
+                  <td>Luis Alberto</td>
+                  <td>344 456 54 54</td>
+                  <td><button type="button" class="btn btn-success">Editar</button></td>
+                  <td><button type="button" class="btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-remove"></i></button></td>
+                </tr>
+                <tr>
+                  <td>0001</td>
+                  <td>Luis Alberto</td>
+                  <td>344 456 54 54</td>
+                  <td><button type="button" class="btn btn-success">Editar</button></td>
+                  <td><button type="button" class="btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-remove"></i></button></td>
+                </tr>
+                <tr>
+                  <td>0001</td>
+                  <td>Luis Alberto</td>
+                  <td>344 456 54 54</td>
+                  <td><button type="button" class="btn btn-success">Editar</button></td>
+                  <td><button type="button" class="btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-remove"></i></button></td>
+                </tr>
+                <tr>
+                  <td>0001</td>
+                  <td>Luis Alberto</td>
+                  <td>344 456 54 54</td>
+                  <td><button type="button" class="btn btn-success">Editar</button></td>
+                  <td><button type="button" class="btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-remove"></i></button></td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+</div>			
             </div>
 
 		</div>

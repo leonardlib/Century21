@@ -2,7 +2,7 @@
 
 <link href="{{ asset('/css/clientes/index.css') }}" rel="stylesheet" type="text/css" />
 @section('container')
-    <div class="container bs-docs-container" id="cont1" >
+<div class="contenedor" id="cont1" >
 	<div class="row">
 		<div class="col-md-9" role = "main" id="contenedor">
 			<form class="form-horizontal">

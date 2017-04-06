@@ -1,11 +1,16 @@
 /* Estilo de logotipo de empresa */
+
 #logo {
     background: #222222;
     margin: 0 0 -0.5%;
 }
+
+
 /* Fin de estilo de logotipo de empresa */
 
+
 /* Estilo pagina de Login */
+
 .form-iniciar {
     max-width: 330px;
     padding: 15px;
@@ -82,11 +87,14 @@
 .form-iniciar button {
     font-size: 14px;
 }
+
+
 /* Fin estilo pagina de Login */
 
 
 /* Estilos para formularios */
-.form-titulo{
+
+.form-titulo {
     background: #222222;
     margin: 0 0 -0.5%;
 }
@@ -102,13 +110,11 @@
     border-color: #9d9d9d;
 }
 
-.panel-default > .panel-heading {
+.panel-default>.panel-heading {
     color: #131212;
     background-color: #222222;
     border-color: #9d9d9d;
 }
-
-
 
 .panel-heading {
     padding: 10px 15px;
@@ -123,11 +129,13 @@
     border-color: #222;
 }
 
-.container {
+.contenedor {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
     background-color: #dadada;
 }
+
+
 /*Fin de estilos para formularios*/

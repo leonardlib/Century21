@@ -9,6 +9,11 @@
         <link rel="stylesheet" href="{{url('/css/estilos.css')}}">
         <script src="{{url('/js/jquery-3.2.0.js')}}"></script>
         <script src="{{url('/css/bootstrap-3/js/bootstrap.js')}}"></script>
+        <style>
+            body {
+                background-image: url("{{url('/img/ciudad.jpg')}}");
+            }
+        </style>
     </head>
     <body>
         <div class="container">

@@ -24,7 +24,14 @@ Route::get('/inicio', function () {
     return view('home.index');
 });
 
+//Catalogos
 Route::get('/catalogos/clientes', function () {
    return view('catalogos.clientes');
 });
 
+//Movimientos
+Route::group(['prefix' => 'movimientos'], function () {
+    Route::get('/solicitudes', function () {
+        return view('movimientos.solicitudes');
+    });
+});

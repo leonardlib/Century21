@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-<link href="{{ asset('/css/index/index.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('index.css') }}" rel="stylesheet" type="text/css" />
 @section('container')
       
     <script type="text/javascript">

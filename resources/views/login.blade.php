@@ -12,6 +12,12 @@
         <style>
             body {
                 background-image: url("{{url('/img/ciudad.jpg')}}");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+
+            html {
+                height: 100%
             }
         </style>
     </head>

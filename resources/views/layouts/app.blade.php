@@ -45,7 +45,7 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li id="solicitudes"><a href="#">Solicitudes</a></li>
+                                <li id="solicitudes"><a href="{{url('/movimientos/solicitudes')}}">Solicitudes</a></li>
                                 <li id="pago_solicitudes"><a href="#">Pago de Solicitudes</a></li>
                                 <li id="contratos"><a href="#">Contratos</a></li>
                                 <li id="pagos_mensuales"><a href="#">Pago de Mensualidades</a></li>

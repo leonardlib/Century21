@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Century 21</title>
-        <link rel="icon" href="{{url('/img/logo.png')}}">
+        <link rel="icon" href="{{url('/img/icono.png')}}">
         <link rel="stylesheet" href="{{url('/css/bootstrap-3/css/bootstrap.css')}}">
         <link rel="stylesheet" href="{{url('/css/estilos.css')}}">
         <script src="{{url('/js/jquery-3.2.0.js')}}"></script>

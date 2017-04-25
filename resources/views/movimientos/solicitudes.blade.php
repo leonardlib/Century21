@@ -160,7 +160,7 @@
                     </div>
                 </div>
             </form>
-            <div class="panel panel-default"> <div class="panel-heading"><h3 class="panel-title">Clientes Registrados</h3></div>
+            <div class="panel panel-default"> <div class="panel-heading"><h3 class="panel-title">Solicitudes Registradas</h3></div>
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>

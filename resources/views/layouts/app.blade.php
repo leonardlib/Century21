@@ -25,7 +25,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li id="inicio"><a href="#">Inicio</a></li>
+                        <li id="inicio"><a href="{{url('/inicio')}}">Inicio</a></li>
                         <li class="dropdown" id="catalogos">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                 Catalogos
@@ -84,6 +84,9 @@
         </nav>
         <div class="container">
             @yield('container')
+        </div>
+        <div class="panel-footer" align="center">
+            <h1>Este es el pie de página</h1>
         </div>
     </body>
 </html>

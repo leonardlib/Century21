@@ -8,6 +8,10 @@ use App\Cliente;
 class ClienteController extends Controller
 {
 
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     public function index(){
     	//$clientes = Cliente::all();
     	
@@ -22,5 +26,4 @@ class ClienteController extends Controller
     	return view('catalogos.clientes');
     
     }
-
 }

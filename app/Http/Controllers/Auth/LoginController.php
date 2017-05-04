@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller {
     use AuthenticatesUsers;
@@ -24,5 +25,10 @@ class LoginController extends Controller {
 
     public function index(Request $request) {
         return view('auth.login');
+    }
+
+    public function salir(Request $request) {
+        Auth::logout();
+        return redirect()->intended('/');
     }
 }

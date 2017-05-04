@@ -15,6 +15,8 @@
  * Ruta inicial hacia la vista donde
  * los usuarios se registran o inician sesion.
  */
+use Illuminate\Support\Facades\Auth;
+
 Route::get('/', 'Auth\LoginController@index');
 
 /**
@@ -22,7 +24,9 @@ Route::get('/', 'Auth\LoginController@index');
  */
 Route::get('/inicio', function () {
     return view('home.index');
-});
+})->middleware('auth');
+
+Route::get('/salir', 'Auth\LoginController@salir');
 
 
 //Catalogos

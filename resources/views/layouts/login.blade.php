@@ -26,18 +26,9 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
                     <div class="div-cuenta" align="center">
-                        <!--TODO: Validación de usuarios-->
                         <img id="logo" src="{{url('/img/logo.png')}}" alt="">
                         <h1 class="text-center titulo-login">¡Bienvenido!</h1>
-                        <form class="form-iniciar" method="get" action="{{url('/inicio')}}">
-                            <input id="email" type="email" class="form-control" placeholder="Correo electronico" required autofocus>
-                            <input id="password" type="password" class="form-control" placeholder="Contraseña" required>
-                            <button class="btn btn-lg btn-warning btn-block" type="submit">Iniciar sesion</button>
-                            <div class="opciones">
-                                <a href="#" class="nueva-cuenta">Crear una cuenta</a>
-                                <a href="#" class="recuperar">Recuperar contraseña</a>
-                            </div>
-                        </form>
+                        @yield('form')
                     </div>
                 </div>
             </div>

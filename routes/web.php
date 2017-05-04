@@ -15,7 +15,7 @@
  * Ruta inicial hacia la vista donde
  * los usuarios se registran o inician sesion.
  */
-Route::get('/', 'LoginController@index');
+Route::get('/', 'Auth\LoginController@index');
 
 /**
  * Ruta hacia la pagina de inicio una vez iniciada una sesion.
@@ -37,3 +37,6 @@ Route::group(['prefix' => 'catalogos'], function () {
 Route::group(['prefix' => 'movimientos'], function () {
     Route::resource('solicitudes', 'SolicitudController');
 });
+
+//Rutas de Autenticación de usuarios
+Auth::routes();

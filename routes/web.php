@@ -24,14 +24,16 @@ Route::get('/inicio', function () {
     return view('home.index');
 });
 
+
 //Catalogos
-Route::get('/catalogos/clientes', function () {
-   return view('catalogos.clientes');
+Route::group(['prefix' => 'catalogos'], function () {
+	Route::resource('clientes','ClienteController');
+	Route::post('clientes_store','ClienteController@store');
 });
+
+
 
 //Movimientos
 Route::group(['prefix' => 'movimientos'], function () {
-    Route::get('/solicitudes', function () {
-        return view('movimientos.solicitudes');
-    });
+    Route::resource('solicitudes', 'SolicitudController');
 });

@@ -33,6 +33,11 @@ Route::get('/salir', 'Auth\LoginController@salir');
 Route::group(['prefix' => 'catalogos'], function () {
 	Route::resource('clientes','ClienteController');
 	Route::post('clientes_store','ClienteController@store');
+	Route::get('clientes.tabla','ClienteController@tabla');
+	Route::post('clientes.editar','ClienteController@editar');
+	Route::post('cliente.getCliente','ClienteController@getCliente');
+
+
 });
 
 
@@ -43,4 +48,9 @@ Route::group(['prefix' => 'movimientos'], function () {
 });
 
 //Rutas de Autenticación de usuarios
-Auth::routes();
+Auth::routes(function(){
+
+    Route::post('solicitudes.store','SolicitudController@store');
+    Route::post('solicitud.getSolicitud','SolicitudController@getSolicitud');
+    Route::post('solicitud.editar','SolicitudController@editar');
+});

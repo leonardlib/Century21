@@ -10,7 +10,7 @@ class ClienteController extends Controller
 {
 
     public function __construct(){
-        $this->middleware('auth');
+       $this->middleware('auth');
     }
 
     public function index(){
@@ -50,6 +50,14 @@ class ClienteController extends Controller
     	$cliente = Cliente::find($id);
 
     	return $cliente;
+    }
+
+    public function eliminar(){
+    	$id = $_POST['id'];
+
+    	$cliente = Cliente::find($id);
+
+    	$cliente->delete();
     }
 
 }

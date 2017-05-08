@@ -24,7 +24,7 @@ Route::get('/', 'Auth\LoginController@index');
  */
 Route::get('/inicio', function () {
     return view('home.index');
-})->middleware('auth');
+})/*->middleware('auth')*/;
 
 Route::get('/salir', 'Auth\LoginController@salir');
 
@@ -36,6 +36,7 @@ Route::group(['prefix' => 'catalogos'], function () {
 	Route::get('clientes.tabla','ClienteController@tabla');
 	Route::post('clientes.editar','ClienteController@editar');
 	Route::post('cliente.getCliente','ClienteController@getCliente');
+	Route::post('cliente.eliminar','ClienteController@eliminar');
 
 
 });
@@ -48,6 +49,7 @@ Route::group(['prefix' => 'movimientos'], function () {
 });
 
 //Rutas de Autenticación de usuarios
+
 Auth::routes(function(){
 
     Route::post('solicitudes.store','SolicitudController@store');

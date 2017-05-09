@@ -20,7 +20,7 @@ class Solicitud extends Model{
 	}
 
 	public function enganche(){
-		return $this->hasOne('App\Enganche',);
+		return $this->hasOne('App\Enganche','solicitud_id','id');
 	}
 
 }

@@ -8,6 +8,14 @@ class Enganche extends Model
 {
     protected $table = "enganches";
 
-    protected $fillable = ["solicitud_id","saldo_enganche"];
-   
+    protected $fillable = ["solicitud_id","saldo_enganche","recibo_id"];
+
+    public function solicitud(){
+    	$this->belongsTo('App\Solicitud');
+    }
+
+    public function recibo(){
+    	$this->hasOne('App\Recibo','recibo_id','id');
+    }
+
 }

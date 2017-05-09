@@ -14,6 +14,4 @@ class Vendedor extends Model
     	$this->hasMany('App\Solicitud','vendedor_id','id');
     }
 
-    
-
 }

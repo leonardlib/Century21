@@ -14,6 +14,7 @@ class FraccionamientoController extends Controller
 
 
 
+
     public function index(){
     	$fraccionamientos = Fraccionamiento::all();
     	return view('catalogos.fraccionamiento',["fraccionamientos" => $fraccionamientos]);

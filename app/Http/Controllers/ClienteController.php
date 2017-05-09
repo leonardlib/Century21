@@ -13,10 +13,17 @@ class ClienteController extends Controller
        $this->middleware('auth');
     }
 
+
+
+
     public function index(){
     	$clientes = Cliente::all();
     	return  view('catalogos.clientes',['clientes' => $clientes]);    
     }
+
+
+
+
 
     public function store(Request $request){
 
@@ -27,7 +34,13 @@ class ClienteController extends Controller
     
     }
 
+
+
+
     public function show(){}
+
+
+
 
 
     public function tabla(){
@@ -35,6 +48,9 @@ class ClienteController extends Controller
     	$clientes = Datatables::of($clientes)->make(true);
     	return $clientes;
     }
+
+
+
 
     public function editar(Request $request){
     	$cliente = Cliente::find($request->id);
@@ -44,6 +60,10 @@ class ClienteController extends Controller
 
     }
 
+
+
+
+
     public function getCliente(){
     	$id = $_POST['id'];
 
@@ -51,6 +71,12 @@ class ClienteController extends Controller
 
     	return $cliente;
     }
+
+
+
+
+
+
 
     public function eliminar(){
     	$id = $_POST['id'];

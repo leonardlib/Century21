@@ -24,7 +24,7 @@
                                 <div class="form-group">
                                     <label for="input-fecha-solicitud" class="col-sm-4 control-label">Fecha</label>
                                     <div class="col-sm-8">
-                                        <input type="date" class="form-control" id="input-fecha-solicitud">
+                                        <input type="date" class="form-control" id="input-fecha-solicitud" name="fecha">
                                     </div>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@
                                     <div class="col-sm-8">
                                         <div class="input-group">
                                             <span class="input-group-addon">#</span>
-                                            <input type="number" class="form-control" id="input-numero-fraccionamiento" aria-label="Amount (to the nearest dollar)" placeholder="Fraccionamiento">
+                                            <input type="number" class="form-control" id="input-numero-fraccionamiento" aria-label="Amount (to the nearest dollar)" name="fraccionamiento_id" placeholder="Fraccionamiento">
                                         </div>
                                     </div>
                                 </div>

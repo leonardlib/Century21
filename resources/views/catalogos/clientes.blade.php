@@ -247,5 +247,14 @@
     <script src="{{ asset('/js/jquery-3.2.0.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
 	<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-<!-- #endregion -->
+<!--
+	
+
+    <script src="{{ asset('/js/clientes.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+	<script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+
+ -->
 @endsection

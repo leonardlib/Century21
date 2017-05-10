@@ -22,6 +22,10 @@ class ComposerStaticInitb3caeb0abe52777ff60d27d152e8a7f8
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'Y' => 
+        array (
+            'Yajra\\Datatables\\' => 17,
+        ),
         'X' => 
         array (
             'XdgBaseDir\\' => 11,
@@ -101,6 +105,10 @@ class ComposerStaticInitb3caeb0abe52777ff60d27d152e8a7f8
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+        ),
+        'Yajra\\Datatables\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -273,9 +281,13 @@ class ComposerStaticInitb3caeb0abe52777ff60d27d152e8a7f8
 
     public static $classMap = array (
         'CreateClientesTable' => __DIR__ . '/../..' . '/database/migrations/2017_04_27_121808_create_clientes_table.php',
+        'CreateEnganchesTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_09_143837_create_enganches_table.php',
+        'CreateFraccionamientosTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_09_125822_create_fraccionamientos_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+        'CreateRecibosTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_09_144927_create_recibos_table.php',
         'CreateSolicitudesTable' => __DIR__ . '/../..' . '/database/migrations/2017_04_27_124013_create_solicitudes_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
+        'CreateVendedoresTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_09_142638_create_vendedores_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',

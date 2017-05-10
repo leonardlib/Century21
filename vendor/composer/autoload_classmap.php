@@ -7,9 +7,13 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'CreateClientesTable' => $baseDir . '/database/migrations/2017_04_27_121808_create_clientes_table.php',
+    'CreateEnganchesTable' => $baseDir . '/database/migrations/2017_05_09_143837_create_enganches_table.php',
+    'CreateFraccionamientosTable' => $baseDir . '/database/migrations/2017_05_09_125822_create_fraccionamientos_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreateRecibosTable' => $baseDir . '/database/migrations/2017_05_09_144927_create_recibos_table.php',
     'CreateSolicitudesTable' => $baseDir . '/database/migrations/2017_04_27_124013_create_solicitudes_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
+    'CreateVendedoresTable' => $baseDir . '/database/migrations/2017_05_09_142638_create_vendedores_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',

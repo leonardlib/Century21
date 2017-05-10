@@ -18,15 +18,15 @@ class CreateSolicitudesTable extends Migration
             $table->increments('id');
             $table->dateTimeTz('fecha');
             $table->integer('fraccionamiento_id');
-            $table->string('nombre');
             $table->integer('vendedor_id');
+            $table->integer('cliente_id');
             $table->integer('no_lote');
             $table->char('manzana', 15);
             $table->double('frente');
             $table->double('fondo');
             $table->double('superficie');
             $table->double('precio_metro');
-            $table->double('enganche');
+            $table->double('enganche',3,2);
             $table->double('precio_total');
             $table->timestamps();
         });

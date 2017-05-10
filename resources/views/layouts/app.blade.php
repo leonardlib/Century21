@@ -32,7 +32,7 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li id="fraccionamientos"><a href="#">Fraccionamiento</a></li>
+                                <li id="fraccionamientos"><a href="{{ url('/catalogos/fraccionamientos') }}">Fraccionamiento</a></li>
 
                                 <li id="clientes"><a href="{{ url('/catalogos/clientes') }}">Clientes</a></li>
                                 <li id="vendedores"><a href="#">Vendedores</a></li>

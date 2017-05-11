@@ -1,11 +1,17 @@
 $(function(){
+    $('#tabSolicitudes').DataTable({
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.12/i18n/Spanish.json"
+        }
+    });
 
+    //Solicitud
     $('#input-fondo, #input-frente').on('change keyup paste', function () {
         $('#input-superficie').val(
             ($('#input-frente').val() * $('#input-fondo').val()).toFixed(2)
         );
     });
-    
+
     $('#input-precio-metro').on('change keyup paste', function () {
         //Precio total
         $('#input-precio-total').val(
@@ -18,12 +24,24 @@ $(function(){
         );
     });
 
-    $('#tabSolicitudes').DataTable({
-        "language": {
-            "url": "//cdn.datatables.net/plug-ins/1.10.12/i18n/Spanish.json"
-        }
+    //Modal
+    $('#modalModificar #input-fondo, #modalModificar #input-frente').on('change keyup paste', function () {
+        $('#modalModificar #input-superficie').val(
+            ($('#modalModificar #input-frente').val() * $('#modalModificar #input-fondo').val()).toFixed(2)
+        );
     });
 
+    $('#modalModificar #input-precio-metro').on('change keyup paste', function () {
+        //Precio total
+        $('#modalModificar #input-precio-total').val(
+            ($('#modalModificar #input-precio-metro').val() * $('#modalModificar #input-superficie').val()).toFixed(2)
+        );
+
+        //Enganche
+        $('#modalModificar #input-enganche').val(
+            ($('#modalModificar #input-precio-total').val() * 0.05).toFixed(2)
+        );
+    });
 
     $(".boton_modificar").on("click", function(){
 
@@ -39,14 +57,14 @@ $(function(){
             success: function(data) {
             	
 
-                var solicitud = data;
-                console.log(solicitud);
+                var solicitud = data[0];
+                var fecha = data[1];
 
-           		$("#modalModificar #input-cliente").val(solicitud.cliente.nombre);
-           		$("#modalModificar #input-fecha-solicitud").val(solicitud.fecha);
-           		$("#modalModificar #input-vendedor").val(solicitud.vendedor.nombre);
-           		$("#modalModificar #input-fraccionamiento").val(solicitud.fraccionamiento.nombre);
-           		$("#modalModificar #input-lote").val(solicitud.lote);
+           		$("#modalModificar #input-cliente").val(solicitud.cliente_id);
+           		$("#modalModificar #input-fecha-solicitud").val(fecha);
+           		$("#modalModificar #input-vendedor").val(solicitud.vendedor_id);
+           		$("#modalModificar #input-fraccionamiento").val(solicitud.fraccionamiento_id);
+           		$("#modalModificar #input-lote").val(solicitud.no_lote);
            		$("#modalModificar #input-manzana").val(solicitud.manzana);
            		$("#modalModificar #input-frente").val(solicitud.frente);
            		$("#modalModificar #id").val(solicitud.id);

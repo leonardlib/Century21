@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="{{url('/css/estilos.css')}}">
         <script src="{{url('/js/jquery-3.2.0.js')}}"></script>
         <script src="{{url('/css/bootstrap-3/js/bootstrap.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+        <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
     </head>
     <body>
         <div class="jumbotron" align="center" id="logo">

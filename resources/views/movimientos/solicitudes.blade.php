@@ -13,7 +13,7 @@
                                 <div class="form-group">
                                     <label for="input-nombre" class="col-sm-4 control-label">Cliente</label>
                                     <div class="col-sm-8">
-                                        <select name="select-cliente" class="form-control" id="input-cliente">
+                                        <select name="cliente_id" class="form-control" id="input-cliente">
                                             <option value="0" selected>Ninguno</option>
                                             @foreach($clientes as $cliente)
                                                 <option value="{{$cliente->id}}">{{$cliente->nombre}}</option>
@@ -36,7 +36,7 @@
                                 <div class="form-group">
                                     <label for="input-fraccionamiento" class="col-sm-4 control-label">Fraccionamiento</label>
                                     <div class="col-sm-8">
-                                        <select name="select-fracc" class="form-control" id="input-fraccionamiento">
+                                        <select name="fraccionamiento_id" class="form-control" id="input-fraccionamiento">
                                             <option value="0" selected>Ninguno</option>
                                             @foreach($fraccionamientos as $fraccionamiento)
                                                 <option value="{{$fraccionamiento->id}}">{{$fraccionamiento->nombre}}</option>
@@ -49,7 +49,7 @@
                                 <div class="form-group">
                                     <label for="input-vendedor" class="col-sm-4 control-label">Vendedor</label>
                                     <div class="col-sm-8">
-                                        <select name="select-vendedor" class="form-control" id="input-vendedor">
+                                        <select name="vendedor_id" class="form-control" id="input-vendedor">
                                             <option value="0" selected>Ninguno</option>
                                             @foreach($vendedores as $vendedor)
                                                 <option value="{{$vendedor->id}}">{{$vendedor->nombre}}</option>
@@ -66,7 +66,7 @@
                                     <div class="col-sm-8">
                                         <div class="input-group">
                                             <span class="input-group-addon">#</span>
-                                            <input type="number" name="lote" class="form-control" id="input-lote" aria-label="Amount (to the nearest dollar)" placeholder="Lote">
+                                            <input type="number" name="no_lote" class="form-control" id="input-lote" aria-label="Amount (to the nearest dollar)" placeholder="Lote">
                                         </div>
                                     </div>
                                 </div>
@@ -114,7 +114,7 @@
                                     <div class="col-sm-8">
                                         <div class="input-group">
                                             <span class="input-group-addon">$</span>
-                                            <input type="number" class="form-control" name="precio-metro" id="input-precio-metro" aria-label="Amount (to the nearest dollar)" placeholder="Precio">
+                                            <input type="number" class="form-control" name="precio_metro" id="input-precio-metro" aria-label="Amount (to the nearest dollar)" placeholder="Precio">
                                         </div>
                                     </div>
                                 </div>
@@ -136,7 +136,7 @@
                                     <div class="col-sm-8">
                                         <div class="input-group">
                                             <span class="input-group-addon">$</span>
-                                            <input type="number" class="form-control" name="precio-total" disabled id="input-precio-total" aria-label="Amount (to the nearest dollar)" placeholder="Precio">
+                                            <input type="number" class="form-control" name="precio_total" disabled id="input-precio-total" aria-label="Amount (to the nearest dollar)" placeholder="Precio">
                                         </div>
                                     </div>
                                 </div>
@@ -175,7 +175,7 @@
                         @foreach($solicitudes as $solicitud)
                             <tr>
                                 <td>{{$solicitud->id}}</td>
-                                <td>{{\Carbon\Carbon::parse($solicitud->fecha)->format('d-m-Y')}}</td>
+                                <td>{{\Carbon\Carbon::parse($solicitud->fecha)->format('d/m/Y')}}</td>
                                 <td>{{$solicitud->fraccionamiento->nombre}}</td>
                                 <td>{{$solicitud->cliente->nombre}}</td>
                                 <td>{{$solicitud->vendedor->nombre}}</td>
@@ -214,7 +214,7 @@
                                 <div class="form-group">
                                     <label for="input-nombre" class="col-sm-4 control-label">Cliente</label>
                                     <div class="col-sm-8">
-                                        <select name="select-cliente" class="form-control" id="input-cliente">
+                                        <select name="cliente_id" class="form-control" id="input-cliente">
                                             <option value="0" selected>Ninguno</option>
                                             @foreach($clientes as $cliente)
                                                 <option value="{{$cliente->id}}">{{$cliente->nombre}}</option>
@@ -237,7 +237,7 @@
                                 <div class="form-group">
                                     <label for="input-fraccionamiento" class="col-sm-4 control-label">Fraccionamiento</label>
                                     <div class="col-sm-8">
-                                        <select name="select-fracc" class="form-control" id="input-fraccionamiento">
+                                        <select name="fraccionamiento_id" class="form-control" id="input-fraccionamiento">
                                             <option value="0" selected>Ninguno</option>
                                             @foreach($fraccionamientos as $fraccionamiento)
                                                 <option value="{{$fraccionamiento->id}}">{{$fraccionamiento->nombre}}</option>
@@ -250,7 +250,7 @@
                                 <div class="form-group">
                                     <label for="input-vendedor" class="col-sm-4 control-label">Vendedor</label>
                                     <div class="col-sm-8">
-                                        <select name="select-vendedor" class="form-control" id="input-vendedor">
+                                        <select name="vendedor_id" class="form-control" id="input-vendedor">
                                             <option value="0" selected>Ninguno</option>
                                             @foreach($vendedores as $vendedor)
                                                 <option value="{{$vendedor->id}}">{{$vendedor->nombre}}</option>
@@ -267,7 +267,7 @@
                                     <div class="col-sm-8">
                                         <div class="input-group">
                                             <span class="input-group-addon">#</span>
-                                            <input type="number" name="lote" class="form-control" id="input-lote" aria-label="Amount (to the nearest dollar)" placeholder="Lote">
+                                            <input type="number" name="no_lote" class="form-control" id="input-lote" aria-label="Amount (to the nearest dollar)" placeholder="Lote">
                                         </div>
                                     </div>
                                 </div>
@@ -315,7 +315,7 @@
                                     <div class="col-sm-8">
                                         <div class="input-group">
                                             <span class="input-group-addon">$</span>
-                                            <input type="number" class="form-control" name="precio-metro" id="input-precio-metro" aria-label="Amount (to the nearest dollar)" placeholder="Precio">
+                                            <input type="number" class="form-control" name="precio_metro" id="input-precio-metro" aria-label="Amount (to the nearest dollar)" placeholder="Precio">
                                         </div>
                                     </div>
                                 </div>
@@ -337,7 +337,7 @@
                                     <div class="col-sm-8">
                                         <div class="input-group">
                                             <span class="input-group-addon">$</span>
-                                            <input type="number" class="form-control" name="precio-total" disabled id="input-precio-total" aria-label="Amount (to the nearest dollar)" placeholder="Precio">
+                                            <input type="number" class="form-control" name="precio_total" disabled id="input-precio-total" aria-label="Amount (to the nearest dollar)" placeholder="Precio">
                                         </div>
                                     </div>
                                 </div>
@@ -363,7 +363,4 @@
     </script>
 
     <script src="{{ asset('/js/solicitudes.js') }}"></script>
-    <script src="{{ asset('/js/jquery-3.2.0.js') }}"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
-    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 @endsection

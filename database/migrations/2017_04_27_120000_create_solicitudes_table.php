@@ -17,9 +17,9 @@ class CreateSolicitudesTable extends Migration
         Schema::create('solicitudes', function (Blueprint $table) {
             $table->increments('id');
             $table->dateTimeTz('fecha');
-            $table->integer('fraccionamiento_id');
-            $table->integer('vendedor_id');
-            $table->integer('cliente_id');
+            $table->integer('fraccionamiento_id')->unsigned();
+            $table->integer('vendedor_id')->unsigned();
+            $table->integer('cliente_id')->unsigned();
             $table->integer('no_lote');
             $table->char('manzana', 15);
             $table->double('frente');
@@ -29,6 +29,12 @@ class CreateSolicitudesTable extends Migration
             $table->double('enganche',3,2);
             $table->double('precio_total');
             $table->timestamps();
+/*
+            
+            $table->foreign('fraccionamiento_id')->references('id')->on('fraccionamientos')->onDelete('cascade');
+            $table->foreign('vendedor_id')->references('id')->on('vendedores')->onDelete('cascade');
+            $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
+  */          
         });
     }
 

@@ -78,7 +78,7 @@
         
 						<div class="row">
 		
-							<div class="col-md-6">
+							<!--<div class="col-md-6">
 								<div class="form-group">
 									<label for="inputClienteNo" class="col-sm-4 control-label">No. Fraccionamiento</label>
 									<div class="col-sm-8">
@@ -88,7 +88,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div>-->
 							
 							<div class="col-md-6">
 								<div class="form-group">
@@ -119,7 +119,7 @@
 
 	<script type="text/javascript">
         $('#catalogos').attr('class', 'active');
-        $('#clientes').attr('class', 'active');
+        $('#fraccionamientos').attr('class', 'active');
 	</script>
 
 

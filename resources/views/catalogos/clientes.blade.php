@@ -14,7 +14,7 @@
 			
 				<div class="panel panel-default"> <div class="panel-heading"><h3 class="panel-title">Clientes</h3></div>
 					<div class="panel-body">
-						<div class="row">
+						<!--<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="inputClienteNo" class="col-sm-4 control-label">No. Cliente</label>
@@ -27,7 +27,7 @@
 								</div>
 							</div>
 							
-						</div>
+						</div>-->
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
@@ -142,7 +142,7 @@
             	<input type="hidden" name="_token" value="{{ csrf_token() }}" id="csrf-token">
             	
         
-						<div class="row">
+						<!--<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
 									<label for="inputClienteNo" class="col-sm-4 control-label">No. Cliente</label>
@@ -154,8 +154,7 @@
 									</div>
 								</div>
 							</div>
-							
-						</div>
+						</div>-->
 						<br>
 						<div class="row">
 							<div class="col-md-6">

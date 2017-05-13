@@ -102,7 +102,7 @@
                                 <div class="form-group">
                                     <label for="input-superficie" class="col-sm-4 control-label">Superficie</label>
                                     <div class="col-sm-8">
-                                        <input type="number" disabled class="form-control" name="superficie" id="input-superficie" placeholder="metros">
+                                        <input type="number" readonly class="form-control" name="superficie" id="input-superficie" placeholder="metros cuadrados">
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +125,7 @@
                                     <div class="col-sm-8">
                                         <div class="input-group">
                                             <span class="input-group-addon">$</span>
-                                            <input type="number" class="form-control" name="enganche" disabled id="input-enganche" aria-label="Amount (to the nearest dollar)" placeholder="Enganche">
+                                            <input type="number" class="form-control" name="enganche" readonly id="input-enganche" aria-label="Amount (to the nearest dollar)" placeholder="Enganche">
                                         </div>
                                     </div>
                                 </div>
@@ -136,7 +136,7 @@
                                     <div class="col-sm-8">
                                         <div class="input-group">
                                             <span class="input-group-addon">$</span>
-                                            <input type="number" class="form-control" name="precio_total" disabled id="input-precio-total" aria-label="Amount (to the nearest dollar)" placeholder="Precio">
+                                            <input type="number" class="form-control" name="precio_total" readonly id="input-precio-total" aria-label="Amount (to the nearest dollar)" placeholder="Precio">
                                         </div>
                                     </div>
                                 </div>
@@ -163,11 +163,11 @@
                             <th>Vendedor</th>
                             <th>No. Lote</th>
                             <th>Manzana</th>
-                            <th>Frente</th>
-                            <th>Fondo</th>
-                            <th>Superficie</th>
+                            <th>Frente (mt)</th>
+                            <th>Fondo (mt)</th>
+                            <th>Superficie (mt<sup>2</sup>)</th>
                             <th>Precio por metro</th>
-                            <th>Enganche</th>
+                            <th>Enganche (5%)</th>
                             <th>Precio total</th>
                         </tr>
                         </thead>
@@ -303,7 +303,7 @@
                                 <div class="form-group">
                                     <label for="input-superficie" class="col-sm-4 control-label">Superficie</label>
                                     <div class="col-sm-8">
-                                        <input type="number" disabled class="form-control" name="superficie" id="input-superficie" placeholder="metros">
+                                        <input type="number" readonly class="form-control" name="superficie" id="input-superficie" placeholder="metros cuadrados">
                                     </div>
                                 </div>
                             </div>
@@ -326,7 +326,7 @@
                                     <div class="col-sm-8">
                                         <div class="input-group">
                                             <span class="input-group-addon">$</span>
-                                            <input type="number" class="form-control" name="enganche" disabled id="input-enganche" aria-label="Amount (to the nearest dollar)" placeholder="Enganche">
+                                            <input type="number" class="form-control" name="enganche" readonly id="input-enganche" aria-label="Amount (to the nearest dollar)" placeholder="Enganche">
                                         </div>
                                     </div>
                                 </div>
@@ -337,7 +337,7 @@
                                     <div class="col-sm-8">
                                         <div class="input-group">
                                             <span class="input-group-addon">$</span>
-                                            <input type="number" class="form-control" name="precio_total" disabled id="input-precio-total" aria-label="Amount (to the nearest dollar)" placeholder="Precio">
+                                            <input type="number" class="form-control" name="precio_total" readonly id="input-precio-total" aria-label="Amount (to the nearest dollar)" placeholder="Precio">
                                         </div>
                                     </div>
                                 </div>
@@ -363,4 +363,7 @@
     </script>
 
     <script src="{{ asset('/js/solicitudes.js') }}"></script>
+    <script src="{{ asset('/js/jquery-3.2.0.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 @endsection

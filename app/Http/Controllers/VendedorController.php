@@ -1,84 +1,77 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Vendedor;
 use Illuminate\Http\Request;
+use Datatables;
 
 class VendedorController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
+ 
+
+
+    public function index(){
+        $vendedores = Vendedor::all();
+        return view('catalogos.vendedores',['vendedores' => $vendedores]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+
+
+
+    public function store(Request $request){
+        $vendedor = new Vendedor($request->all());
+        $vendedor->save();
+
+        return redirect()->route("vendedores.index");
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+
+
+
+    public function tabla(){
+        $vendedores = Vendedor::all();
+
+        return Datatables::of($vendedores)->make(true);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+
+
+
+
+    public function eliminar(){
+        $id = $_POST['id'];
+
+        $vendedor = Vendedor::find($id);
+
+        $vendedor->delete();
+
+        return redirect()->route('vendedores.index');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+
+
+
+
+    public function editar(Request $request){
+
+        $vendedor = Vendedor::find($request->id);
+
+        $vendedor->fill($request->all());
+
+        $vendedor->save();
+
+        return redirect()->route('vendedores.index');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+    
+
+
+    public function getVendedor(){
+        $id = $_POST['id'];
+
+        $vendedor = Vendedor::find($id);
+
+        return $vendedor;
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

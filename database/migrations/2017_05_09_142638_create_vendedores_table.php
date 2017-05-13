@@ -22,7 +22,7 @@ class CreateVendedoresTable extends Migration
             $table->char('celular1',20);
             $table->char('celular2',20);
             $table->char('email',50);
-            $table->double('comision',3,2);
+            $table->double('comision');
             $table->timestamps();
         });
     }

@@ -37,7 +37,7 @@
                                 <li id="fraccionamientos"><a href="{{ url('/catalogos/fraccionamientos') }}">Fraccionamiento</a></li>
 
                                 <li id="clientes"><a href="{{ url('/catalogos/clientes') }}">Clientes</a></li>
-                                <li id="vendedores"><a href="#">Vendedores</a></li>
+                                <li id="vendedores"><a href="{{ url('/catalogos/vendedores') }}">Vendedores</a></li>
                                 <li id="usuarios"><a href="#">Usuarios</a></li>
                             </ul>
                         </li>

@@ -157,3 +157,12 @@ body {
 .panel-footer {
     background-color: #222222;
 }
+
+.seccion-footer {
+    color: #dadada;
+    font-size: 12px;
+}
+
+.minaviso p {
+    text-align: justify;
+}

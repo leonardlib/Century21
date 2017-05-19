@@ -21,7 +21,6 @@ class EngancheController extends Controller
     							'solicitudes.enganche as enganche',
     							'solicitudes.id as id'
     					)->get();
-    
     	return view('movimientos.enganches',['solicitudes'=>$solicitudes]);
     }
 }

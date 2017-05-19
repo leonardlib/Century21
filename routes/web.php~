@@ -70,8 +70,6 @@ Route::group(['prefix' => 'movimientos'], function () {
     Route::post('solicitudes.editar','SolicitudController@editar');
     Route::post('solicitudes.getSolicitud','SolicitudController@getSolicitud');
     Route::post('solicitudes.eliminar', 'SolicitudController@eliminar');
-    
-    Route::resource('enganches','EngancheController');
 });
 
 //Rutas de Autenticación de usuarios

@@ -166,3 +166,7 @@ body {
 .minaviso p {
     text-align: justify;
 }
+
+.panel-footer a {
+    color: #f6bc35;
+}

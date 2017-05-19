@@ -14,40 +14,25 @@
 
         <input type="hidden" name="token" value="{{ $token }}">
 
-        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-
+        <div class="form-group{">
             <div class="col-md-12">
                 <input id="email" type="email" class="form-control" name="email" value="{{ $email or old('email') }}" placeholder="Correo electrónico" required autofocus>
-
-                @if ($errors->has('email'))
-                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                @endif
             </div>
         </div>
 
-        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-
-            <div class="col-md-12">
+        <div class="form-group">
+            <div class="col-md-12" style="margin-bottom: -4px;">
                 <input id="password" type="password" class="form-control" name="password" placeholder="Nueva" required>
-
-                @if ($errors->has('password'))
-                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                @endif
             </div>
         </div>
 
-        <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
+        <div class="form-group">
             <div class="col-md-12">
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirmar" required>
-
-                @if ($errors->has('password_confirmation'))
+                @if (isset($errors))
                     <span class="help-block">
-                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
-                                    </span>
+                        <strong>{{ $errors->first() }}</strong>
+                    </span>
                 @endif
             </div>
         </div>
@@ -60,4 +45,9 @@
             </div>
         </div>
     </form>
+    <style>
+        .div-cuenta {
+            min-height: 450px;
+        }
+    </style>
 @endsection

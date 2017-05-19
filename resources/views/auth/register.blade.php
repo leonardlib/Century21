@@ -1,5 +1,7 @@
 @extends('layouts.login')
 
+@section('titulo', 'Únete a Century 21')
+
 @section('form')
 <form class="form-iniciar" role="form" method="POST" action="{{ route('register') }}">
     {{ csrf_field() }}

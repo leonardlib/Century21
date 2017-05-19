@@ -1,5 +1,7 @@
 @extends('layouts.login')
 
+@section('titulo', '¡Bienvenido!')
+
 @section('form')
 <form class="form-iniciar" role="form" method="POST" action="{{ route('login') }}">
     <div class="form-group">

@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
         <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
     </head>
-    <body>
+    <body> 
         <div class="jumbotron" align="center" id="logo">
             <img src="{{url('/img/logo.png')}}" alt="">
         </div>
@@ -60,10 +60,10 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li id="lista_solicitudes"><a href="#">Lista de Solicitudes</a></li>
-                                <li id="saldos"><a href="#">Saldos</a></li>
-                                <li id="estado_cuenta"><a href="#">Estado de Cuenta</a></li>
-                                <li id="saldos_vencidos"><a href="#">Saldos Vencidos</a></li>
+                                <li id="lista_solicitudes"><a href="{{url('/reportes/solicitudes')}}">Lista de Solicitudes</a></li>
+                                <li id="saldos"><a href="{{url('/reportes/saldos')}}">Saldos</a></li>
+                                <li id="estado_cuenta"><a href="{{url('/reportes/estado_cuenta')}}">Estado de Cuenta</a></li>
+                                <li id="saldos_vencidos"><a href="{{url('/reportes/saldos_vencidos')}}">Saldos Vencidos</a></li>
                             </ul>
                         </li>
                         <li class="dropdown" id="utilerias">

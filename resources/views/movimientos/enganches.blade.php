@@ -1,11 +1,9 @@
-
 @extends('layouts.app')
-
 <link href="{{url('/css/index.css')}}" rel="stylesheet" type="text/css" />
 @section('container')
     <div class="row">
         <div class="col-md-12" role = "main" id="contenedor">
-            <form class="form-horizontal" action="solicitudes.store" method="post">
+            <form class="form-horizontal" action="enganches.store" method="post">
                 <br>
                 <div class="panel panel-default"> <div class="panel-heading"><h3 class="panel-title">Pago de Solicitud</h3></div>
                     <div class="panel-body">
@@ -39,7 +37,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -97,12 +94,9 @@
                                 </div>
                             </div>
                         </div>
-                        
-                      
                         <br>
                         <hr>
                         <br>
-                        
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -114,11 +108,11 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-3 col-md-offset-1">
+                            <div class="col-md-4 col-md-offset-1">
                                 <div class="form-group">
-                                    <label for="input-nombre" class="col-sm-4 control-label">Concepto</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" class="form-control" id="input-concepto" name="concepto">
+                                    <label for="input-nombre" class="col-sm-3 control-label">Concepto</label>
+                                    <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="input-concepto" name="concepto">
                                     </div>
                                 </div>
                             </div>
@@ -130,11 +124,9 @@
                                     </div>
                                 </div>
                             </div>
-                            
                         </div>
                         <br>
                         <br>
-                        
                         <div class="panel-footer">
                             <div align="right">
                                 <button class="btn btn-warning">Imprimir</button>
@@ -149,26 +141,24 @@
                     <table id="tabSolicitudes" class="table table-striped">
                         <thead>
                         <tr>
-                            <th>No. Solicitud</th>
+                            <th>#</th>
                             <th>Nombre Cliente</th>
-                            <th>Fraccionamiento</th>
-                            <th>Lote</th>
-                            <th>Manzana</th>
-                            <th>Saldo Enganche</th>
-                        </tr>
+                            <th>Concepto</th>
+                            <th>Fecha</th>
+                            <th>Monto</th>
+                            <th>Ver</th>
+                        </tr>   
                         </thead>
                         <tbody>
-                        	@foreach($solicitudes as $solicitud)
+                        	@foreach($recibos as $recibo)
                         		<tr>
-                        			<td>{{$solicitud->id}}</td>
-                        			<td>{{$solicitud->nombre}}</td>
-                        			<td>{{$solicitud->fraccionamiento}}</td>
-                        			<td>{{$solicitud->lote}}</td>
-                        			<td>{{$solicitud->manzana}}</td>
-                        			<td>{{$solicitud->enganche}}</td>
+                        			<td>{{$recibo->recibo_id}}</td>
+                        			<td>{{$recibo->nombre}}</td>
+                        			<td>{{$recibo->concepto}}</td>
+                        			<td>{{$recibo->fecha}}</td>
+                        			<td>{{$recibo->monto}}</td>
                         		</tr>
                         	@endforeach
-                        	
                         </tbody>
                     </table>
                 </div>
@@ -186,7 +176,6 @@
                     </div>
                     <div class="modal-body">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}" id="csrf-token">
-
 						<div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
@@ -212,10 +201,10 @@
                                             @foreach($solicitudes as $solicitud)
                                                 <option value="{{$solicitud->id}}">{{$solicitud->nombre}}</option>
                                             @endforeach
-                                        </select>                                    </div>
+                                        </select>                                   
+                                    </div>
                                 </div>
                             </div>
-                        
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="input-" class="col-sm-4 control-label">Fraccionamiento</label>
@@ -230,8 +219,6 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
@@ -273,12 +260,7 @@
                                 </div>
                             </div>
                         </div>                       
-                       
-                      
-
                         <input type="hidden" name="id" id="id">
-
-
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                             <button type="submit" id="modalGuardar" class="btn btn-primary">Guardar</button>
@@ -288,12 +270,10 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </form>
-
     <script type="text/javascript">
         $('#movimientos').attr('class', 'active');
         $('#solicitudes').attr('class', 'active');
     </script>
-
     <script src="{{ asset('/js/enganches.js') }}"></script>
     <script src="{{ asset('/js/jquery-3.2.0.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />

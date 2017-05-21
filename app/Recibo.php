@@ -8,7 +8,7 @@ class Recibo extends Model
 {
     protected $table = "recibos";
 
-    protected $fillable = ["fecha","concepto","monto"];    
+    protected $fillable = ["fecha","concepto","monto","enganche_id"];    
 
     public function enganche(){
     	$this->belongsTo('App\Enganche');

@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91664981-ee36-4915-a4dc-c922d38e5952" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.env" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Century21.iml" afterPath="$PROJECT_DIR$/.idea/Century21.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -860,12 +855,12 @@
       <workItem from="1494938503057" duration="1980000" />
       <workItem from="1495109681537" duration="382000" />
       <workItem from="1495205728443" duration="5937000" />
-      <workItem from="1495411696504" duration="1179000" />
+      <workItem from="1495411696504" duration="1240000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61418000" />
+    <option name="totallyTimeSpent" value="61479000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-277" y="-1034" width="1854" height="975" extended-state="0" />

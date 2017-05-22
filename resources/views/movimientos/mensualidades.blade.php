@@ -3,9 +3,9 @@
 @section('container')
     <div class="row">
         <div class="col-md-12" role = "main" id="contenedor">
-            <form class="form-horizontal" action="enganches.store" method="post">
+            <form class="form-horizontal" action="mensualidades.store" method="post">
                 <br>
-                <div class="panel panel-default"> <div class="panel-heading"><h3 class="panel-title">Pago de Solicitud</h3></div>
+                <div class="panel panel-default"> <div class="panel-heading"><h3 class="panel-title">Pago de Mensualidades</h3></div>
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-6">
@@ -28,11 +28,11 @@
                                     <label for="input-nombre" class="col-sm-4 control-label">Nombre</label>
                                     <div class="col-sm-8">
                                         <select name="nombre" class="form-control" id="input-nombre">
-	                                        <option value="0" selected>Ninguno</option>
-	                                        @foreach($solicitudes as $solicitud)
-	                                            <option value="{{$solicitud->id}}">{{$solicitud->nombre}}</option>
-	                                        @endforeach
-                                    	</select>
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                <option value="{{$solicitud->id}}">{{$solicitud->nombre}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -43,11 +43,11 @@
                                     <label for="input-" class="col-sm-4 control-label">Fraccionamiento</label>
                                     <div class="col-sm-8">
                                         <select name="fraccionamiento" class="form-control" id="input-fraccionamiento">
-	                                        <option value="0" selected>Ninguno</option>
-	                                        @foreach($solicitudes as $solicitud)
-	                                            <option value="{{$solicitud->id}}">{{$solicitud->fraccionamiento}}</option>
-	                                        @endforeach
-                                    	</select> 
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                <option value="{{$solicitud->id}}">{{$solicitud->fraccionamiento}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -59,11 +59,11 @@
                                     <label for="lote" class="col-sm-4 control-label">Lote</label>
                                     <div class="col-sm-8">
                                         <select name="lote" class="form-control" id="input-lote">
-		                                        <option value="0" selected>Ninguno</option>
-		                                        @foreach($solicitudes as $solicitud)
-		                                            <option value="{{$solicitud->id}}">{{$solicitud->lote}}</option>
-		                                        @endforeach
-                                    	</select>
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                <option value="{{$solicitud->id}}">{{$solicitud->lote}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -72,11 +72,11 @@
                                     <label for="manzana" class="col-sm-4 control-label">Manzana</label>
                                     <div class="col-sm-8">
                                         <select name="manzana" class="form-control" id="input-manzana">
-		                                        <option value="0" selected>Ninguno</option>
-		                                        @foreach($solicitudes as $solicitud)
-		                                            <option value="{{$solicitud->id}}">{{$solicitud->manzana}}</option>
-		                                        @endforeach
-                                    	</select>
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                <option value="{{$solicitud->id}}">{{$solicitud->manzana}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -85,11 +85,11 @@
                                     <label for="input-superficie" class="col-sm-5 control-label">Saldo Enganche</label>
                                     <div class="col-sm-7">
                                         <select name="enganche" class="form-control" id="input-enganche">
-		                                        <option value="0" selected>Ninguno</option>
-		                                        @foreach($solicitudes as $solicitud)
-		                                            <option value="{{$solicitud->id}}">{{$solicitud->enganche}}</option>
-		                                        @endforeach
-                                    	</select>
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                <option value="{{$solicitud->id}}">{{$solicitud->enganche}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +112,7 @@
                                 <div class="form-group">
                                     <label for="input-nombre" class="col-sm-3 control-label">Concepto</label>
                                     <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="input-concepto" name="concepto">
+                                        <input type="text" class="form-control" id="input-concepto" name="concepto">
                                     </div>
                                 </div>
                             </div>
@@ -147,18 +147,18 @@
                             <th>Fecha</th>
                             <th>Monto</th>
                             <th>Ver</th>
-                        </tr>   
+                        </tr>
                         </thead>
                         <tbody>
-                        	@foreach($recibos as $recibo)
-                        		<tr>
-                        			<td>{{$recibo->recibo_id}}</td>
-                        			<td>{{$recibo->nombre}}</td>
-                        			<td>{{$recibo->concepto}}</td>
-                        			<td>{{$recibo->fecha}}</td>
-                        			<td>{{$recibo->monto}}</td>
-                        		</tr>
-                        	@endforeach
+                        @foreach($recibos as $recibo)
+                            <tr>
+                                <td>{{$recibo->recibo_id}}</td>
+                                <td>{{$recibo->nombre}}</td>
+                                <td>{{$recibo->concepto}}</td>
+                                <td>{{$recibo->fecha}}</td>
+                                <td>{{$recibo->monto}}</td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -176,7 +176,7 @@
                     </div>
                     <div class="modal-body">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}" id="csrf-token">
-						<div class="row">
+                        <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="input-nombre" class="col-sm-4 control-label">Cliente</label>
@@ -201,7 +201,7 @@
                                             @foreach($solicitudes as $solicitud)
                                                 <option value="{{$solicitud->id}}">{{$solicitud->nombre}}</option>
                                             @endforeach
-                                        </select>                                   
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -250,7 +250,7 @@
                                 <div class="form-group">
                                     <label for="input-superficie" class="col-sm-4 control-label">Saldo Enganche</label>
                                     <div class="col-sm-8">
-                                    	<select name="enganche" class="form-control" id="input-enganche">
+                                        <select name="enganche" class="form-control" id="input-enganche">
                                             <option value="0" selected>Ninguno</option>
                                             @foreach($solicitudes as $solicitud)
                                                 <option value="{{$solicitud->id}}">{{$solicitud->enganche}}</option>
@@ -259,7 +259,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>                       
+                        </div>
                         <input type="hidden" name="id" id="id">
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -272,7 +272,7 @@
     </form>
     <script type="text/javascript">
         $('#movimientos').attr('class', 'active');
-        $('#pago_solicitudes').attr('class', 'active');
+        $('#pagos_mensuales').attr('class', 'active');
     </script>
     <script src="{{ asset('/js/enganches.js') }}"></script>
     <script src="{{ asset('/js/jquery-3.2.0.js') }}"></script>

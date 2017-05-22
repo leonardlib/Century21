@@ -50,8 +50,8 @@
                                 <li id="solicitudes"><a href="{{url('/movimientos/solicitudes')}}">Solicitudes</a></li>
                                 <li id="pago_solicitudes"><a href="{{url('/movimientos/enganches')}}">Pago de Solicitudes</a></li>
                                 <li id="contratos"><a href="{{url('/movimientos/contratos')}}">Contratos</a></li>
-                                <li id="pagos_mensuales"><a href="#">Pago de Mensualidades</a></li>
-                                <li id="mensualidades_vencidas"><a href="#">Mensualidades Vencidas</a></li>
+                                <li id="pagos_mensuales"><a href="{{url('/movimientos/mensualidades')}}">Pago de Mensualidades</a></li>
+                                <li id="mensualidades_vencidas"><a href="{{'/movimientos/vencidas'}}">Mensualidades Vencidas</a></li>
                             </ul>
                         </li>
                         <li class="dropdown" id="reportes">

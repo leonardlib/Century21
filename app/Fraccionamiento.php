@@ -12,4 +12,8 @@ class Fraccionamiento extends Model
     public function solicitud(){
     	$this->hasMany('App\Solicitud');
     }
+
+    public function contratos(){
+        $this->hasMany('App\Contratos');
+    }
 }

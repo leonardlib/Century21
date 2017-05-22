@@ -27,4 +27,8 @@ class Solicitud extends Model{
 		return $this->hasOne('App\Enganche','solicitud_id','id');
 	}
 
+    public function contrato(){
+        return $this->belongsTo('App\Contratos');
+    }
+
 }

@@ -68,7 +68,7 @@ class EngancheController extends Controller
 							]);
 		$recibo->save();
 		
-		dd($recibo);
+		//dd($recibo);
 
 		return redirect()->route('enganches.index');
 		

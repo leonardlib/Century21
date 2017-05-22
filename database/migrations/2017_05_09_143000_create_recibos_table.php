@@ -18,6 +18,7 @@ class CreateRecibosTable extends Migration
             $table->dateTimeTz('fecha');
             $table->char('concepto',50);
             $table->double('monto',8,2);
+            $table->integer('enganche_id');
             $table->timestamps();
         });
     }

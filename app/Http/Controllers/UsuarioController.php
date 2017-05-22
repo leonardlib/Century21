@@ -15,17 +15,9 @@ class UsuarioController extends Controller{
     
     
     public function store(Request $request){
-    	
-    	//Encriptar la contrasena
-    	$contrasena = bcrypt($request->password);  	
- 
-    	$nombre = $request->nombre;
-    	$correo = $request->email;
-    
-    	
-    	$usuario = new User(['name'=>$nombre,'email'=>$correo,'password'=>$contrasena]);
+    	$usuario = new User($request->all());
     	$usuario->save();
-    	
+    
     	return redirect()->route('usuarios.index');
     }
     

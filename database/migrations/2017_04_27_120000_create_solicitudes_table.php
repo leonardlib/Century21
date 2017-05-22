@@ -26,7 +26,7 @@ class CreateSolicitudesTable extends Migration
             $table->double('fondo');
             $table->double('superficie');
             $table->double('precio_metro');
-            $table->double('enganche',3,2);
+            $table->double('enganche',15,2);
             $table->double('precio_total');
             $table->timestamps();
 /*

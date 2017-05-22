@@ -72,7 +72,27 @@ Route::group(['prefix' => 'movimientos'], function () {
     Route::post('solicitudes.eliminar', 'SolicitudController@eliminar');
     
     Route::resource('enganches','EngancheController');
+	Route::post('enganches.store','EngancheController@store');
 });
+
+
+
+//Movimientos
+Route::group(['prefix' => 'reportes'], function () {
+    Route::resource('solicitudes', 'ReporteSolicitudesController');
+    Route::get('solicitudesVerPdf','ReporteSolicitudesController@verPdf');
+
+    Route::resource('saldos','ReporteSaldosController');
+    Route::get('saldosVerPdf','ReporteSaldosController@verPdf');
+
+    Route::resource('estado_cuenta','ReporteEstadoCuentaController');
+    Route::get('estado_cuentaVerPdf','ReporteEstadoCuentaController@verPdf');
+
+    Route::resource('saldos_vencidos','ReporteSaldosVencidosController');
+    Route::get('saldos_vencidosVerPdf','ReporteSaldosController@verPdf');
+
+});
+
 
 //Rutas de Autenticación de usuarios
 

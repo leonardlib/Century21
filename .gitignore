@@ -23,4 +23,4 @@ Homestead.json
 
 .gitignore
 .idea/inspectionProfiles/
-.env
+/.env

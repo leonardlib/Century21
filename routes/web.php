@@ -95,5 +95,8 @@ Route::group(['prefix' => 'reportes'], function () {
 
 
 //Rutas de Autenticación de usuarios
+Auth::routes();
 
 Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

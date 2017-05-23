@@ -2,9 +2,28 @@
 <link href="{{url('/css/index.css')}}" rel="stylesheet" type="text/css" />
 @section('container')
     <div class="row">
-        <div class="panel panel-default"> <div class="panel-heading"><h3 class="panel-title">Mensualidades Pagadas</h3></div>
+        <div class="panel panel-default"> <div class="panel-heading"><h3 class="panel-title">Contrato</h3></div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="input-contrato-vencido" class="col-sm-4 control-label">Contrato</label>
+                            <div class="col-sm-8">
+                                <select name="contrato_id" class="form-control" id="input-contrato-vencido">
+                                    <option value="0" selected>Ninguno</option>
+                                    @foreach($contratos as $contrato)
+                                        <option value="{{$contrato->id}}">{{$contrato->id}} </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default"> <div class="panel-heading"><h3 class="panel-title">Mensualidades Vencidas</h3></div>
             <div class="table-responsive">
-                <table id="tabContratos" class="table table-striped">
+                <table id="tabContratosVencidos" class="table table-striped">
                     <thead>
                     <tr>
                         <th>#</th>

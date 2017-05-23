@@ -35,4 +35,39 @@ $(function () {
             }
         });
     });
+
+    $('#input-contrato-vencido').on('change', function () {
+        $.ajax({
+            url: 'mensualidades_vencidas.contrato',
+            data: {'id_contrato' : $('#input-contrato-vencido').find('option:selected').html()},
+            type: 'POST',
+            dataType: 'JSON',
+            error: function (xhr) {
+                console.log(xhr);
+                alert('Ocurrio un error. Intentelo de nuevo.')
+            },
+            success: function (response) {
+                console.log(response);
+
+                var body = $('<tbody></tbody>');
+
+                $.each(response.mensualidades_pagar, function (i, mensual) {
+                    body.append(
+                        '<tr> ' +
+                        '   <td>' + mensual.id + '</td> ' +
+                        '   <td>' + mensual.contrato_id + '</td> ' +
+                        '   <td>' + mensual.monto + '</td> ' +
+                        '   <td>' + mensual.fecha + '</td> ' +
+                        '</tr>'
+                    );
+                });
+
+                var head = $('<thead><tr> <th>#</th> <th>Contrato</th> <th>Monto $</th> <th>Fecha</th> </tr> </thead>');
+                var htmlText = head.html() + body.html();
+                console.log(htmlText)
+
+                $('#tabContratosVencidos').html(htmlText);
+            }
+        });
+    });
 });

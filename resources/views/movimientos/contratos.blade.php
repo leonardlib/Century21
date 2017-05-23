@@ -236,6 +236,8 @@
                                 <td>{{$contrato->plazo}} meses</td>
                                 <td>{{$contrato->monto_mensual}}</td>
                                 <td>{{$contrato->saldo}}</td>
+                                <td><button type="button" class="boton_modificar btn btn-success"  data-toggle="modal" data-target="#modalModificar" value="{{$contrato->id}}">Editar</button></td>
+                                <td><button  value="{{$contrato->id}}" type="button" class="btn btn-warning btn-circle btn-xl boton_eliminar"><i class="glyphicon glyphicon-remove"></i></button></td>
                             </tr>
                         @endforeach
                         </tbody>

@@ -222,6 +222,8 @@
                                 <td>{{$mensualidad->contrato_id}}</td>
                                 <td>{{$mensualidad->monto}}</td>
                                 <td>{{$mensualidad->fecha}}</td>
+                                <td><button type="button" class="boton_modificar btn btn-success"  data-toggle="modal" data-target="#modalModificar" value="{{$mensualidad->id}}">Editar</button></td>
+                                <td><button  value="{{$mensualidad->id}}" type="button" class="btn btn-warning btn-circle btn-xl boton_eliminar"><i class="glyphicon glyphicon-remove"></i></button></td>
                             </tr>
                         @endforeach
                         </tbody>

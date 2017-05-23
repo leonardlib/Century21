@@ -74,4 +74,10 @@ class EngancheController extends Controller
 		
 	}
 
+	public function editar(Request $request) {
+	    $id_enganche = $request->input('id');
+	    $enganche = Recibo::find($id_enganche);
+	    return response($enganche);
+    }
+
 }

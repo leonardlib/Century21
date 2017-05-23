@@ -73,6 +73,7 @@ Route::group(['prefix' => 'movimientos'], function () {
     
     Route::resource('enganches','EngancheController');
 	Route::post('enganches.store','EngancheController@store');
+	Route::post('enganches.editar','EngancheController@editar');
 
     Route::resource('mensualidades','MensualidadController');
     Route::post('mensualidades.store','MensualidadController@store');

@@ -40,7 +40,9 @@
 </head>
 <body>
 
-<center><h2>Reporte Solicitudes</h2></center>
+<center>
+	<h2>Reporte Solicitudes</h2>
+</center>
 <pre>
 
 	<p><b>Total Solicitudes:</b> {{ count($solicitudes)}}</p>

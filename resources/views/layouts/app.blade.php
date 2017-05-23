@@ -61,10 +61,10 @@
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li id="lista_solicitudes"><a href="{{url('/reportes/solicitudes')}}">Lista de Solicitudes</a></li>
-                                <li id="saldos"><a href="{{url('/reportes/saldos')}}">Saldos</a></li>
-                                <li id="estado_cuenta"><a href="{{url('/reportes/estado_cuenta')}}">Estado de Cuenta</a></li>
-                                <li id="saldos_vencidos"><a href="{{url('/reportes/saldos_vencidos')}}">Saldos Vencidos</a></li>
+                                <li id="lista_solicitudes"><a href="{{url('/reportes/solicitudesR')}}">Lista de Solicitudes</a></li>
+                                <li id="saldos"><a href="{{url('/reportes/saldosR')}}">Saldos</a></li>
+                                <li id="estado_cuenta"><a href="{{url('/reportes/estado_cuentaR')}}">Estado de Cuenta</a></li>
+                                <li id="saldos_vencidos"><a href="{{url('/reportes/saldos_vencidosR')}}">Saldos Vencidos</a></li>
                             </ul>
                         </li>
                         <li class="dropdown" id="utilerias">

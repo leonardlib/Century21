@@ -232,6 +232,221 @@
             </div>
         </div>
     </div>
+    <form action="solicitudes.editar" method="post">
+        <div class="modal fade" id="modalModificar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Editar Solicitud</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}" id="csrf-token">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="input-solicitud" class="col-sm-6 control-label">Solicitud</label>
+                                    <div class="col-sm-6">
+                                        <select name="solicitud_id" class="form-control" id="input-solicitud">
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                <option value="{{$solicitud->id}}">{{$solicitud->id}}  -  {{$solicitud->cliente->nombre}} </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="input-fraccionamiento" class="col-sm-6 control-label">Fraccionamiento</label>
+                                    <div class="col-sm-6">
+                                        <select name="fraccionamiento_id" class="form-control" id="input-fraccionamiento" disabled>
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                <option value="{{$solicitud->id}}"> {{ $solicitud->fraccionamiento->nombre }} </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="input-cliente" class="col-sm-6 control-label">Cliente</label>
+                                    <div class="col-sm-6">
+                                        <select name="cliente_id" class="form-control" id="input-cliente" disabled>
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                <option value="{{$solicitud->id}}"> {{ $solicitud->cliente->nombre }} </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="input-lote" class="col-sm-6 control-label">Lote</label>
+                                    <div class="col-sm-6">
+                                        <select name="no_lote" class="form-control" id="input-lote" disabled>
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                <option value="{{$solicitud->id}}"> {{ $solicitud->no_lote }} </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="input-manzana" class="col-sm-6 control-label">Manzana</label>
+                                    <div class="col-sm-6">
+                                        <select name="manzana" class="form-control" id="input-manzana" disabled>
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                <option value="{{$solicitud->id}}"> {{ $solicitud->manzana }} </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="input-frente" class="col-sm-6 control-label">Frente (mt)</label>
+                                    <div class="col-sm-6">
+                                        <select name="frente" class="form-control" id="input-frente" disabled>
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                <option value="{{$solicitud->id}}"> {{ $solicitud->frente }} </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="input-fondo" class="col-sm-6 control-label">Fondo (mt)</label>
+                                    <div class="col-sm-6">
+                                        <select name="fondo" class="form-control" id="input-fondo" disabled>
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                <option value="{{$solicitud->id}}"> {{ $solicitud->fondo }} </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="input-superficie" class="col-sm-6 control-label">Superficie (mt<sup>2</sup>)</label>
+                                    <div class="col-sm-6">
+                                        <select name="superficie" class="form-control" id="input-superficie" disabled>
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                <option value="{{$solicitud->id}}"> {{ $solicitud->superficie }} </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="input-precio-metro" class="col-sm-6 control-label">Precio por metro $</label>
+                                    <div class="col-sm-6">
+                                        <select name="precio_metro" class="form-control" id="input-precio-metro" disabled>
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                <option value="{{$solicitud->id}}"> {{ $solicitud->precio_metro }} </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="input-enganche" class="col-sm-6 control-label">Enganche (%)</label>
+                                    <div class="col-sm-6">
+                                        <select name="enganche" class="form-control" id="input-enganche" disabled>
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                <option value="{{$solicitud->id}}"> {{ $solicitud->enganche }} </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="input-precio-total" class="col-sm-6 control-label">Precio total $</label>
+                                    <div class="col-sm-6">
+                                        <select name="precio_total" class="form-control" id="input-precio-total" disabled>
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                <option value="{{$solicitud->id}}"> {{ $solicitud->precio_total }} </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="input-contrato" class="col-sm-6 control-label">Contrato</label>
+                                    <div class="col-sm-6">
+                                        <select name="contrato_id" class="form-control" id="input-contrato">
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($solicitudes as $solicitud)
+                                                @foreach($solicitud->contrato as $contrato)
+                                                    <option value="{{$contrato->id}}"> {{ $contrato->id }} </option>
+                                                @endforeach
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="input-fecha-pago" class="col-sm-6 control-label">Fecha próximo pago</label>
+                                    <div class="col-sm-6">
+                                        <input type="date" name="plazo" id="input-fecha-pago" class="form-control" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="input-pago" class="col-sm-6 control-label">Cantidad de pago $</label>
+                                    <div class="col-sm-6">
+                                        <input type="number" name="monto" id="input-pago" class="form-control" readonly>
+                                        <input type="hidden" name="id_mensualidad" id="input-id-mensualidad">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                    </div>
+
+                        <input type="hidden" name="id" id="id">
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            <button type="submit" id="modalGuardar" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </form>
     <script type="text/javascript">
         $('#movimientos').attr('class', 'active');
         $('#pagos_mensuales').attr('class', 'active');

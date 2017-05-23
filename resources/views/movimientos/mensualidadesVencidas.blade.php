@@ -48,6 +48,46 @@
             </div>
         </div>
     </div>
+    <form action="solicitudes.editar" method="post">
+        <div class="modal fade" id="modalModificar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Editar Solicitud</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}" id="csrf-token">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="input-contrato-vencido" class="col-sm-4 control-label">Contrato</label>
+                                    <div class="col-sm-8">
+                                        <select name="contrato_id" class="form-control" id="input-contrato-vencido">
+                                            <option value="0" selected>Ninguno</option>
+                                            @foreach($contratos as $contrato)
+                                                <option value="{{$contrato->id}}">{{$contrato->id}} </option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <input type="hidden" name="id" id="id">
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" id="modalGuardar" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </form>
     <script type="text/javascript">
         $('#movimientos').attr('class', 'active');
         $('#mensualidades_vencidas').attr('class', 'active');

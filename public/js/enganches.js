@@ -16,6 +16,8 @@ $(function(){
 		$('#input-enganche').val(solicitud_id).trigger('change');
 	});	
 
+
+
     $('#tabClientes').DataTable({
         "language": {
             "url": "//cdn.datatables.net/plug-ins/1.10.12/i18n/Spanish.json"
@@ -55,18 +57,46 @@ $(function(){
 
     	$.ajax({
             type: "POST",
-            url: 'enganche.getEnganche',
+            url: 'enganches.getEnganche',
             headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
             data: {
                 id: id,
             },
             success: function(data) {
-                var enganche = data;
-                console.log(enganche);
+                console.log(data);
 
-           		$("#modalModificar #input-fecha-recibo").val(enganche.fecha);
-           		$("#modalModificar #input-concepto").val(enganche.concepto);
-           		$("#modalModificar #input-monto").val(enganche.monto);
+                $("#modalModificar #input-monto").val(data.monto);
+
+                var fecha = new Date(data.fecha);
+                fecha = fecha.getFullYear() + '-' + ("0" + (fecha.getMonth() + 1)).slice(-2)  + '-' + ("0" + (fecha.getDay() + 1)).slice(-2);
+                $("#modalModificar #input-fecha-recibo").val(fecha);
+
+                $("#modalModificar #input-concepto").val(data.concepto);
+
+                $("#modalModificar #id").val(data.id);
+                
+
+            },
+            error: function(data) {
+                console.log('Error:', data);
+
+            }
+        });
+    });
+
+    $(".boton_eliminar").on("click", function(){
+        
+        var id = $(this).val();
+
+        $.ajax({
+            type: "POST",
+            url: 'enganches.eliminar',
+            headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+            data: {
+                id: id,
+            },
+            success: function(data) {
+                window.location.href = "enganches";
             },
             error: function(data) {
                 console.log('Error:', data);

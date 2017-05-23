@@ -75,9 +75,24 @@ class EngancheController extends Controller
 	}
 
 	public function editar(Request $request) {
-	    $id_enganche = $request->input('id');
-	    $enganche = Recibo::find($id_enganche);
-	    return response($enganche);
+		$recibo = Recibo::find($request->id);
+		
+		$recibo->fill($request->all());
+		
+		$recibo->save();
+		
+		return redirect()->route('enganches.index');
     }
 
+    public function getEnganche(){
+    	$id = $_POST['id'];
+    	$recibos = Recibo::find($id);
+    	return $recibos;
+    }
+
+    public function eliminar(){
+    	$id = $_POST['id'];
+    	$recibo = Recibo::find($id);
+    	$recibo->delete();	
+    }
 }

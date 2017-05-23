@@ -220,7 +220,7 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Solicitud</th>
+                            <th>Nombre Cliente</th>
                             <th>Fraccionamiento</th>
                             <th>Plazo</th>
                             <th>Monto Mensual ($)</th>
@@ -231,8 +231,8 @@
                         @foreach($contratos as $contrato)
                             <tr>
                                 <td>{{$contrato->id}}</td>
-                                <td>{{$contrato->solicitud_id}}</td>
-                                <td>{{$contrato->fraccionamiento_id}}</td>
+                                <td>{{$contrato->solicitud->cliente->nombre}}</td>
+                                <td>{{$contrato->fraccionamiento->nombre}}</td>
                                 <td>{{$contrato->plazo}} meses</td>
                                 <td>{{$contrato->monto_mensual}}</td>
                                 <td>{{$contrato->saldo}}</td>

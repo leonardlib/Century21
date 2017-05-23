@@ -21,6 +21,10 @@ class Contratos extends Model {
     }
 
     public function solicitud(){
-        $this->hasMany('App\Solicitud');
+        return $this->belongsTo('App\Solicitud');
+    }
+
+    public function mensualidades(){
+        return $this->belongsTo('App\Mensualidad');
     }
 }

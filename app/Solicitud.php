@@ -28,7 +28,7 @@ class Solicitud extends Model{
 	}
 
     public function contrato(){
-        return $this->belongsTo('App\Contratos');
+        return $this->hasMany('App\Contratos');
     }
 
 }

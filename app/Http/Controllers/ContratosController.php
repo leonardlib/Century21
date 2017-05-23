@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Contratos;
 use App\Fraccionamiento;
+use App\Mensualidad;
 use App\Solicitud;
+use Carbon\Carbon;
+use DateTime;
 use Illuminate\Http\Request;
 
 class ContratosController extends Controller {
@@ -33,7 +36,7 @@ class ContratosController extends Controller {
 
         $id_fraccionamiento = $solicitud->fraccionamiento_id;
 
-        Contratos::create([
+        $contrato = Contratos::create([
             'solicitud_id' => $id_solicitud,
             'fraccionamiento_id' => $id_fraccionamiento,
             'saldo' => $saldo,
@@ -41,6 +44,23 @@ class ContratosController extends Controller {
             'monto_mensual' => $monto_mensual,
             'fecha' => $fecha
         ]);
+
+        $contrato->save();
+
+        $fecha_aux = new DateTime($fecha);
+        $plazo = intval($plazo);
+
+        while ($plazo > 0) {
+            $fecha_nueva = Carbon::createFromFormat('Y-m-d H:i:s', $fecha_aux->format('Y-m-d H:i:s'));
+            $fecha_nueva->addMonths($plazo);
+            Mensualidad::create([
+                'contrato_id' => $contrato->id,
+                'monto' => $contrato->monto_mensual,
+                'fecha' => $fecha_nueva->toDateTimeString(),
+                'pagado' => false
+            ]);
+            $plazo--;
+        }
 
         return redirect()->route('contratos.index');
     }

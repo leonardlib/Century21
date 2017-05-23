@@ -3,7 +3,7 @@
 @section('container')
     <div class="row">
         <div class="col-md-12" role = "main" id="contenedor">
-            <form class="form-horizontal" action="contratos.store" method="post">
+            <form class="form-horizontal" action="mensualidades.store" method="post">
                 <br>
                 <div class="panel panel-default"> <div class="panel-heading"><h3 class="panel-title">Pago de Mensualidades</h3></div>
                     <div class="panel-body">
@@ -190,6 +190,7 @@
                                     <label for="input-pago" class="col-sm-6 control-label">Cantidad de pago $</label>
                                     <div class="col-sm-6">
                                         <input type="number" name="monto" id="input-pago" class="form-control" readonly>
+                                        <input type="hidden" name="id_mensualidad" id="input-id-mensualidad">
                                     </div>
                                 </div>
                             </div>
@@ -197,8 +198,7 @@
                         <br/>
                         <div class="panel-footer">
                             <div align="right">
-                                <button class="btn btn-warning">Imprimir</button>
-                                <button class="btn btn-warning" type="submit">Guardar</button>
+                                <button class="btn btn-warning" type="submit">Pagar</button>
                             </div>
                         </div>
                     </div>

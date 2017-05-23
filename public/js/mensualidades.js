@@ -31,6 +31,7 @@ $(function () {
                 var fecha = new Date(mensualidad_proxima.fecha);
                 fecha = fecha.getFullYear() + '-' + ("0" + (fecha.getMonth() + 1)).slice(-2)  + '-' + ("0" + (fecha.getDay() + 1)).slice(-2);
                 $('#input-fecha-pago').val(fecha);
+                $('#input-id-mensualidad').val(mensualidad_proxima.id);
                 $('#input-pago').val(mensualidad_proxima.monto);
             }
         });

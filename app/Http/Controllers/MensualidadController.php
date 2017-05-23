@@ -30,7 +30,11 @@ class MensualidadController extends Controller
     }
 
     public function store(Request $request) {
+        $id_mensualidad = $request->input('id_mensualidad');
 
+        $mensualidad = Mensualidad::find($id_mensualidad);
+        $mensualidad->pagado = true;
+        $mensualidad->save();
 
         return redirect()->route('mensualidades.index');
     }

@@ -84,6 +84,8 @@ Route::group(['prefix' => 'movimientos'], function () {
     Route::resource('mensualidades','MensualidadController');
     Route::post('mensualidades.store','MensualidadController@store');
     Route::post('mensualidades.contrato', 'MensualidadController@contrato');
+    Route::post('mensualidades.getMensualidad', 'MensualidadController@getMensualidad');
+
 
     Route::resource('mensualidades_vencidas', 'MensualidadVencidaController');
     Route::post('mensualidades_vencidas.contrato', 'MensualidadVencidaController@contrato');

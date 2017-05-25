@@ -1,11 +1,10 @@
 $(function(){
-
-    $('#tabUsuarios').DataTable({
+ /*   $('#tabUsuarios').DataTable({
         "language": {
             "url": "//cdn.datatables.net/plug-ins/1.10.12/i18n/Spanish.json"
         }
     });
-
+*/
     $(".boton_modificar").on("click", function(){
 
     	var id = $(this).val();
@@ -37,12 +36,14 @@ $(function(){
     });
 
     $(".boton_eliminar").on("click", function(){
-    	
+
     	var id = $(this).val();
+
+        console.log("**********: "+id);
 
     	$.ajax({
             type: "POST",
-            url: 'usuario.eliminar',
+            url: 'usuarios.eliminar',
             headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
             data: {
                 id: id,

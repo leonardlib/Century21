@@ -90,6 +90,9 @@ Route::group(['prefix' => 'movimientos'], function () {
 
 	Route::resource('contratos', 'ContratosController');
 	Route::post('contratos.store', 'ContratosController@store');
+	Route::post('contratos.editar', 'ContratosController@editar');
+	Route::post('contratos.getContrato', 'ContratosController@getContrato');
+	Route::post('contratos.eliminar', 'ContratosController@eliminar');
 });
 
 

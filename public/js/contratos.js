@@ -23,4 +23,63 @@ $(function () {
             (saldo / $('#input-plazo').val()).toFixed(0)
         );
     });
+
+    $(".boton_eliminar").on("click", function(){
+        
+        var id = $(this).val();
+
+        $.ajax({
+            type: "POST",
+            url: 'contratos.eliminar',
+            headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+            data: {
+                id: id,
+            },
+            success: function(data) {
+                window.location.href = "contratos";
+            },
+            error: function(data) {
+                console.log('Error:', data);
+
+            }
+        });
+    });
+
+    $(".boton_modificar").on("click", function(){
+
+        var id = $(this).val();
+
+        $.ajax({
+            type: "POST",
+            url: 'contratos.getContrato',
+            headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+            data: {
+                id: id,
+            },
+            success: function(data) {
+                console.log(data);
+
+                $("#modalModificar #solicitud_id").val(data.solicitud_id);
+
+                var fecha = new Date(data.fecha);
+                fecha = fecha.getFullYear() + '-' + ("0" + (fecha.getMonth() + 1)).slice(-2)  + '-' + ("0" + (fecha.getDay() + 1)).slice(-2);
+                $("#modalModificar #input-fecha-contrato").val(fecha);
+
+                $("#modalModificar #saldo_id").val(data.saldo);
+
+                $("#modalModificar #id").val(data.id);
+
+                $("#modalModificar #input-plazo").val(data.plazo);
+
+                $("#modalModificar #input-mensualidad").val(data.monto_mensual);
+
+                
+
+            },
+            error: function(data) {
+                console.log('Error:', data);
+
+            }
+        });
+    });
 });

@@ -155,8 +155,8 @@
                         			<td>{{$recibo->concepto}}</td>
                         			<td>{{$recibo->fecha}}</td>
                         			<td>{{$recibo->monto}}</td>
-                                    <td><button type="button" class="boton_modificar btn btn-success"  data-toggle="modal" data-target="#modalModificar" value="{{$recibo->id}}">Editar</button></td>
-                                    <td><button  value="{{$recibo->id}}" type="button" class="btn btn-warning btn-circle btn-xl boton_eliminar"><i class="glyphicon glyphicon-remove"></i></button></td>
+                                    <td><button type="button" class="boton_modificar btn btn-success"  data-toggle="modal" data-target="#modalModificar" value="{{$recibo->recibo_id}}">Editar</button></td>
+                                    <td><button  value="{{$recibo->recibo_id}}" type="button" class="btn btn-warning btn-circle btn-xl boton_eliminar"><i class="glyphicon glyphicon-remove"></i></button></td>
                         		</tr>
                         	@endforeach
                         </tbody>
@@ -176,38 +176,42 @@
                     </div>
                     <div class="modal-body">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <div class="form-group">
-                                    <label for="input-nombre" class="col-sm-4 control-label">Fecha</label>
+                                    <label for="input-nombre" class="col-sm-2 control-label">Fecha</label>
                                     <div class="col-sm-4">
                                         <input type="date" class="form-control" id="input-fecha-recibo" name="fecha">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-4 col-md-offset-1">
+                        <br>
+                        <div class="row">    
+                            <div class="col-md-8">
                                 <div class="form-group">
-                                    <label for="input-nombre" class="col-sm-3 control-label">Concepto</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="input-concepto" name="concepto">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="input-nombre" class="col-sm-4 control-label">Monto</label>
-                                    <div class="col-sm-8">
-                                        <input type="number" class="form-control" id="input-monto" name="monto">
+                                    <label for="input-nombre" class="col-sm-2 control-label">Concepto</label>
+                                    <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="input-concepto" name="concepto">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <br>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label for="input-nombre" class="col-sm-2 control-label">Monto</label>
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="input-monto" name="monto">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="id" id="id">
+                        <br>
                         <br>
                         <div class="panel-footer">
                             <div align="right">
-                                <button class="btn btn-warning">Imprimir</button>
                                 <button class="btn btn-warning">Guardar</button>
                             </div>
                         </div>

@@ -1,37 +1,6 @@
 $(function(){
-    /*$('#tabSolicitudes').DataTable({
-        "language": {
-            "url": "//cdn.datatables.net/plug-ins/1.10.12/i18n/Spanish.json"
-        },
-
-         "fnDrawCallback": function() {
-         //$('.check-estado').bootstrapToggle();
-         },
-         "scrollX": true,
-         "processing": true,
-         "serverSide": true,
-         "ajax": 'clientes.tabla',
-         "columns": [
-         {data: 'id'},
-         {data: 'nombre'},
-         {data: 'saldo'},
-         {data: 'telefono'},
-         {data: 'colonia'},
-         {data: 'ife'},
-         {data: 'id',
-         render: function(data, type, row) {
-         return '<button type="button" class="btn btn-success boton_modificar" id="modal_"'+data+' data-toggle="modal" data-target="#modalModificar" value='+data+'>Editar</button>'
-         }
-         },
-         {data: 'id',
-         render: function(data, type, row) {
-         return '<button type="button" class="btn btn-warning btn-circle btn-xl"><i class="glyphicon glyphicon-remove"></i></button>'
-         }
-         }
-         ],
-    });*/
-
-    //Solicitud
+    
+    
     $('#input-fondo, #input-frente').on('change keyup paste', function () {
         $('#input-superficie').val(
             ($('#input-frente').val() * $('#input-fondo').val()).toFixed(2)

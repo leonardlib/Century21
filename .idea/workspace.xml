@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91664981-ee36-4915-a4dc-c922d38e5952" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/reciboSaldos.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/PDF/saldos.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ReporteSaldosController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReporteSaldosController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/movimientos/contratos.blade.php" afterPath="$PROJECT_DIR$/resources/views/movimientos/contratos.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/movimientos/mensualidades.blade.php" afterPath="$PROJECT_DIR$/resources/views/movimientos/mensualidades.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/movimientos/mensualidadesVencidas.blade.php" afterPath="$PROJECT_DIR$/resources/views/movimientos/mensualidadesVencidas.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/reportes/saldos.blade.php" afterPath="$PROJECT_DIR$/resources/views/reportes/saldos.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +20,7 @@
       <file leaf-file-name="contratos.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/movimientos/contratos.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="5941">
               <caret line="457" column="29" lean-forward="false" selection-start-line="457" selection-start-column="29" selection-end-line="457" selection-end-column="29" />
               <folding>
                 <marker date="1495546183000" expanded="true" signature="9:22" ph="..." />
@@ -114,8 +106,8 @@
       <file leaf-file-name="solicitudes.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/movimientos/solicitudes.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="337" column="56" lean-forward="true" selection-start-line="337" selection-start-column="56" selection-end-line="337" selection-end-column="56" />
+            <state relative-caret-position="4381">
+              <caret line="337" column="56" lean-forward="false" selection-start-line="337" selection-start-column="56" selection-end-line="337" selection-end-column="56" />
               <folding>
                 <marker date="1495416045000" expanded="true" signature="9:22" ph="..." />
                 <marker date="1495416045000" expanded="true" signature="39:60" ph="..." />
@@ -168,8 +160,8 @@
       <file leaf-file-name="mensualidadesVencidas.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/movimientos/mensualidadesVencidas.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="65" column="83" lean-forward="true" selection-start-line="65" selection-start-column="83" selection-end-line="65" selection-end-column="83" />
+            <state relative-caret-position="247">
+              <caret line="58" column="26" lean-forward="false" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
               <folding>
                 <marker date="1495546482000" expanded="true" signature="9:22" ph="..." />
                 <marker date="1495546482000" expanded="true" signature="38:59" ph="..." />
@@ -183,6 +175,8 @@
                 <marker date="1495546482000" expanded="true" signature="2215:2231" ph="..." />
                 <marker date="1495546482000" expanded="true" signature="2306:2322" ph="..." />
                 <marker date="1495546482000" expanded="true" signature="3326:3340" ph="..." />
+                <marker date="1495546482000" expanded="true" signature="4039:4052" ph="..." />
+                <marker date="1495546482000" expanded="true" signature="4058:4071" ph="..." />
                 <marker date="1495546482000" expanded="true" signature="5000:5031" ph="..." />
                 <marker date="1495546482000" expanded="true" signature="5064:5094" ph="..." />
               </folding>
@@ -203,7 +197,7 @@
       <file leaf-file-name="MensualidadController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MensualidadController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
+            <state relative-caret-position="351">
               <caret line="34" column="58" lean-forward="false" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
               <folding>
                 <element signature="e#40#58#0#PHP" expanded="true" />
@@ -215,7 +209,7 @@
       <file leaf-file-name="enganches.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/movimientos/enganches.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-198">
+            <state relative-caret-position="2054">
               <caret line="158" column="200" lean-forward="false" selection-start-line="157" selection-start-column="36" selection-end-line="158" selection-end-column="200" />
               <folding>
                 <marker date="1495525577000" expanded="true" signature="9:22" ph="..." />
@@ -251,8 +245,8 @@
       <file leaf-file-name="mensualidades.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/movimientos/mensualidades.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2910">
-              <caret line="444" column="26" lean-forward="true" selection-start-line="246" selection-start-column="24" selection-end-line="444" selection-end-column="26" />
+            <state relative-caret-position="5772">
+              <caret line="444" column="26" lean-forward="false" selection-start-line="246" selection-start-column="24" selection-end-line="444" selection-end-column="26" />
               <folding>
                 <marker date="1495546215000" expanded="true" signature="9:22" ph="..." />
                 <marker date="1495546215000" expanded="true" signature="38:59" ph="..." />
@@ -339,12 +333,9 @@
       <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
+            <state relative-caret-position="858">
               <caret line="75" column="61" lean-forward="false" selection-start-line="75" selection-start-column="61" selection-end-line="75" selection-end-column="61" />
-              <folding>
-                <marker date="1495545671000" expanded="true" signature="3618:4232" ph="..." />
-                <marker date="1495545671000" expanded="true" signature="3657:4231" ph="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -511,9 +502,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="740" />
+    <option name="x" value="-284" />
+    <option name="y" value="-1036" />
+    <option name="width" value="1863" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -533,8 +525,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -819,7 +812,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1304,15 +1296,16 @@
       <workItem from="1495510782662" duration="13098000" />
       <workItem from="1495526075661" duration="50000" />
       <workItem from="1495542599431" duration="530000" />
-      <workItem from="1495544538188" duration="1764000" />
+      <workItem from="1495544538188" duration="1965000" />
+      <workItem from="1495661997166" duration="180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96592000" />
+    <option name="totallyTimeSpent" value="96973000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="740" extended-state="6" />
+    <frame x="-284" y="-1036" width="1863" height="1000" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1329,7 +1322,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3379845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2374798" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1630972" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1536,7 +1529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
           <caret line="33" column="5" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1544,7 +1536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1686,7 +1677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
           <caret line="68" column="70" lean-forward="false" selection-start-line="68" selection-start-column="70" selection-end-line="68" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1718,12 +1708,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
+        <state relative-caret-position="858">
           <caret line="75" column="61" lean-forward="false" selection-start-line="75" selection-start-column="61" selection-end-line="75" selection-end-column="61" />
-          <folding>
-            <marker date="1495545671000" expanded="true" signature="3618:4232" ph="..." />
-            <marker date="1495545671000" expanded="true" signature="3657:4231" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1737,7 +1724,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MensualidadController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
+        <state relative-caret-position="351">
           <caret line="34" column="58" lean-forward="false" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
           <folding>
             <element signature="e#40#58#0#PHP" expanded="true" />
@@ -1747,8 +1734,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/movimientos/solicitudes.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="337" column="56" lean-forward="true" selection-start-line="337" selection-start-column="56" selection-end-line="337" selection-end-column="56" />
+        <state relative-caret-position="4381">
+          <caret line="337" column="56" lean-forward="false" selection-start-line="337" selection-start-column="56" selection-end-line="337" selection-end-column="56" />
           <folding>
             <marker date="1495416045000" expanded="true" signature="9:22" ph="..." />
             <marker date="1495416045000" expanded="true" signature="39:60" ph="..." />
@@ -1789,7 +1776,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/movimientos/enganches.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198">
+        <state relative-caret-position="2054">
           <caret line="158" column="200" lean-forward="false" selection-start-line="157" selection-start-column="36" selection-end-line="158" selection-end-column="200" />
           <folding>
             <marker date="1495525577000" expanded="true" signature="9:22" ph="..." />
@@ -1823,7 +1810,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/movimientos/contratos.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="5941">
           <caret line="457" column="29" lean-forward="false" selection-start-line="457" selection-start-column="29" selection-end-line="457" selection-end-column="29" />
           <folding>
             <marker date="1495546183000" expanded="true" signature="9:22" ph="..." />
@@ -1907,8 +1894,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/movimientos/mensualidades.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2910">
-          <caret line="444" column="26" lean-forward="true" selection-start-line="246" selection-start-column="24" selection-end-line="444" selection-end-column="26" />
+        <state relative-caret-position="5772">
+          <caret line="444" column="26" lean-forward="false" selection-start-line="246" selection-start-column="24" selection-end-line="444" selection-end-column="26" />
           <folding>
             <marker date="1495546215000" expanded="true" signature="9:22" ph="..." />
             <marker date="1495546215000" expanded="true" signature="38:59" ph="..." />
@@ -1983,8 +1970,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/movimientos/mensualidadesVencidas.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="65" column="83" lean-forward="true" selection-start-line="65" selection-start-column="83" selection-end-line="65" selection-end-column="83" />
+        <state relative-caret-position="247">
+          <caret line="58" column="26" lean-forward="false" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
           <folding>
             <marker date="1495546482000" expanded="true" signature="9:22" ph="..." />
             <marker date="1495546482000" expanded="true" signature="38:59" ph="..." />
@@ -1998,6 +1985,8 @@
             <marker date="1495546482000" expanded="true" signature="2215:2231" ph="..." />
             <marker date="1495546482000" expanded="true" signature="2306:2322" ph="..." />
             <marker date="1495546482000" expanded="true" signature="3326:3340" ph="..." />
+            <marker date="1495546482000" expanded="true" signature="4039:4052" ph="..." />
+            <marker date="1495546482000" expanded="true" signature="4058:4071" ph="..." />
             <marker date="1495546482000" expanded="true" signature="5000:5031" ph="..." />
             <marker date="1495546482000" expanded="true" signature="5064:5094" ph="..." />
           </folding>

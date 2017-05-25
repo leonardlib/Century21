@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Solicitud;
 
@@ -37,8 +38,9 @@ class ReporteSolicitudesController extends Controller
 
 
     	//dd($solicitudes);
+        $fecha = Carbon::now();
 
-    	$pdf = \PDF::loadView('PDF.solicitudes',['solicitudes' => $solicitudes]);
+    	$pdf = \PDF::loadView('PDF.solicitudes',['solicitudes' => $solicitudes, 'fecha' => $fecha]);
 
     	
 

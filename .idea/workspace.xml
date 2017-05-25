@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91664981-ee36-4915-a4dc-c922d38e5952" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ClienteController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClienteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/FraccionamientoController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/FraccionamientoController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/VendedorController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/VendedorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/PDF/clientes.blade.php" afterPath="$PROJECT_DIR$/resources/views/PDF/clientes.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/PDF/fraccionamiento.blade.php" afterPath="$PROJECT_DIR$/resources/views/PDF/fraccionamiento.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/PDF/saldos.blade.php" afterPath="$PROJECT_DIR$/resources/views/PDF/saldos.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/PDF/solicitudes.blade.php" afterPath="$PROJECT_DIR$/resources/views/PDF/solicitudes.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/PDF/usuarios.blade.php" afterPath="$PROJECT_DIR$/resources/views/PDF/usuarios.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/PDF/vendedores.blade.php" afterPath="$PROJECT_DIR$/resources/views/PDF/vendedores.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ReporteSolicitudesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReporteSolicitudesController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,30 +17,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UsuarioController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="61" column="20" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
-              <folding>
-                <element signature="e#40#58#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VendedorController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/VendedorController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="81" column="20" lean-forward="false" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
-              <folding>
-                <element signature="e#39#57#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="clientes.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/catalogos/clientes.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -120,7 +86,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vendedores.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vendedores.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/PDF/vendedores.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -138,6 +104,38 @@
                 <marker date="1495715624000" expanded="true" signature="1234:1248" ph="..." />
                 <marker date="1495715624000" expanded="true" signature="1265:1284" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SolicitudController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SolicitudController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-571">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReporteSolicitudesController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReporteSolicitudesController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="42" column="97" lean-forward="false" selection-start-line="42" selection-start-column="97" selection-end-line="42" selection-end-column="97" />
+              <folding>
+                <element signature="e#40#58#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReporteSaldosVencidosController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReporteSaldosVencidosController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -204,18 +202,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FraccionamientoController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FraccionamientoController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="74" column="21" lean-forward="false" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
-              <folding>
-                <element signature="e#39#55#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -244,7 +230,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/vendor/mail/html/button.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/resources/views/vendor/mail/html/message.blade.php" />
@@ -295,6 +280,7 @@
         <option value="$PROJECT_DIR$/resources/views/PDF/solicitudes.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/PDF/usuarios.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/PDF/vendedores.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ReporteSolicitudesController.php" />
       </list>
     </option>
   </component>
@@ -1200,12 +1186,12 @@
       <workItem from="1495544538188" duration="1965000" />
       <workItem from="1495661997166" duration="610000" />
       <workItem from="1495685933442" duration="5037000" />
-      <workItem from="1495715160450" duration="428000" />
+      <workItem from="1495715160450" duration="717000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102868000" />
+    <option name="totallyTimeSpent" value="103157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="741" extended-state="6" />
@@ -1259,21 +1245,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_09_125822_create_fraccionamientos_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_04_27_120000_create_solicitudes_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Enganche.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1385,14 +1356,6 @@
             <marker date="1495545671000" expanded="true" signature="7358:7388" ph="..." />
             <marker date="1495545671000" expanded="true" signature="7693:7724" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SolicitudController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-535">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1625,22 +1588,22 @@
         <state relative-caret-position="13">
           <caret line="85" column="45" lean-forward="false" selection-start-line="84" selection-start-column="28" selection-end-line="85" selection-end-column="45" />
           <folding>
-            <marker date="1495691001000" expanded="true" signature="9:22" ph="..." />
-            <marker date="1495691001000" expanded="true" signature="39:60" ph="..." />
-            <marker date="1495691001000" expanded="true" signature="109:120" ph="..." />
-            <marker date="1495691001000" expanded="true" signature="157:171" ph="..." />
-            <marker date="1495691001000" expanded="true" signature="220:234" ph="..." />
-            <marker date="1495691001000" expanded="true" signature="463:477" ph="..." />
-            <marker date="1495691001000" expanded="true" signature="3224:3236" ph="..." />
-            <marker date="1495691001000" expanded="true" signature="3258:3272" ph="..." />
-            <marker date="1495691001000" expanded="true" signature="3294:3309" ph="..." />
-            <marker date="1495691001000" expanded="true" signature="3451:3463" ph="..." />
-            <marker date="1495691001000" expanded="true" signature="3518:3530" ph="..." />
-            <marker date="1495691001000" expanded="true" signature="3692:3704" ph="..." />
-            <marker date="1495691001000" expanded="true" signature="4498:4512" ph="..." />
-            <marker date="1495691001000" expanded="true" signature="6794:6820" ph="..." />
-            <marker date="1495691001000" expanded="true" signature="6853:6883" ph="..." />
-            <marker date="1495691001000" expanded="true" signature="7118:7144" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="9:22" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="39:60" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="109:120" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="157:171" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="220:234" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="463:477" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="3224:3236" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="3258:3272" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="3294:3309" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="3451:3463" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="3518:3530" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="3692:3704" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="4498:4512" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="6808:6834" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="6867:6897" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="7132:7158" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1668,9 +1631,15 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UsuarioController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
-          <caret line="61" column="20" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+          <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
           <folding>
             <element signature="e#40#58#0#PHP" expanded="true" />
+            <marker date="1495715684000" expanded="true" signature="162:1349" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="519:714" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="752:846" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="886:955" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="990:1100" ph="..." />
+            <marker date="1495715684000" expanded="true" signature="1143:1347" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1821,6 +1790,32 @@
             <marker date="1495715624000" expanded="true" signature="1234:1248" ph="..." />
             <marker date="1495715624000" expanded="true" signature="1265:1284" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SolicitudController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-571">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReporteSolicitudesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="42" column="97" lean-forward="false" selection-start-line="42" selection-start-column="97" selection-end-line="42" selection-end-column="97" />
+          <folding>
+            <element signature="e#40#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ReporteSaldosVencidosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

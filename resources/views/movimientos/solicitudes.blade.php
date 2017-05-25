@@ -169,6 +169,8 @@
                             <th>Precio por metro</th>
                             <th>Enganche (5%)</th>
                             <th>Precio total</th>
+                            <th>Modificar</th>
+                            <th>Eliminar</th>
                         </tr>
                         </thead>
                         <tbody>

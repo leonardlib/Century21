@@ -55,4 +55,12 @@ class UsuarioController extends Controller{
         $usuario = User::of($usuario)->make(true);
         return $usuario;
     }
+
+    public function verPdf($id_usuario){
+        $usuario = User::find($id_usuario);
+
+        $pdf = \PDF::loadView('PDF.usuarios',['usuario' => $usuario]);
+
+        return $pdf->stream();
+    }
 }

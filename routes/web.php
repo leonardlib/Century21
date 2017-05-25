@@ -37,6 +37,7 @@ Route::group(['prefix' => 'catalogos'], function () {
 	Route::post('clientes.editar','ClienteController@editar');
 	Route::post('cliente.getCliente','ClienteController@getCliente');
 	Route::post('cliente.eliminar','ClienteController@eliminar');
+    Route::get('clientesPDF{id_cliente}', 'ClienteController@verPdf');
 
 	Route::resource('vendedores','VendedorController');
 	Route::post('vendedores.store','VendedorController@store');
@@ -44,6 +45,7 @@ Route::group(['prefix' => 'catalogos'], function () {
 	Route::post('vendedores.editar','VendedorController@editar');
 	Route::post('vendedores.getVendedor','VendedorController@getVendedor');
 	Route::post('vendedores.eliminar','VendedorController@eliminar');
+	Route::get('vendedoresPDF{id_vendedor}', 'VendedorController@verPdf');
 
 	Route::resource('fraccionamientos','FraccionamientoController');
 	Route::post('fraccionamientos.store','FraccionamientoController@store');
@@ -51,6 +53,7 @@ Route::group(['prefix' => 'catalogos'], function () {
 	Route::post('fraccionamientos.editar','FraccionamientoController@editar');
 	Route::post('fraccionamientos.getFraccionamiento','FraccionamientoController@getFraccionamiento');
 	Route::post('fraccionamientos.eliminar','FraccionamientoController@eliminar');
+    Route::get('fraccionamientosPDF{id_fraccionamiento}','FraccionamientoController@verPdf');
 	
 	Route::resource('usuarios','UsuarioController');
 	Route::post('usuarios.store','UsuarioController@store');
@@ -58,6 +61,7 @@ Route::group(['prefix' => 'catalogos'], function () {
 	Route::post('usuarios.editar','UsuarioController@editar');
 	Route::post('usuarios.getUsuario','UsuarioController@getUsuario');
 	Route::post('usuarios.eliminar','UsuarioController@eliminar');
+	Route::get('usuariosPDF{id_usuario}', 'UsuarioController@verPdf');
 });
 
 

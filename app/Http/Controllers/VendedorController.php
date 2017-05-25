@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Solicitud;
 use App\Vendedor;
 use Illuminate\Http\Request;
 use Datatables;
@@ -72,6 +73,14 @@ class VendedorController extends Controller
         $vendedor = Vendedor::find($id);
 
         return $vendedor;
+    }
+
+    public function verPdf($id_vendedor) {
+        $vendedor = Vendedor::find($id_vendedor);
+        $solicitudes = Solicitud::where('vendedor_id', $id_vendedor)->orderBy('fecha')->get();
+
+        $pdf = \PDF::loadView('PDF.vendedores',['solicitudes' => $solicitudes, 'vendedor'=> $vendedor]);
+        return $pdf->stream();
     }
 
 }

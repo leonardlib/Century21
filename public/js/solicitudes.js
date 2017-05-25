@@ -1,5 +1,10 @@
 $(function(){
-    
+
+    $('#tabSolicitudes').DataTable({
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.12/i18n/Spanish.json"
+        }
+    });
     
     $('#input-fondo, #input-frente').on('change keyup paste', function () {
         $('#input-superficie').val(

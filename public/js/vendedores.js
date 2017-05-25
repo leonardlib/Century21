@@ -60,4 +60,8 @@ $(function(){
         });
     });
 
+    $('.btn-PDF').on('click', function () {
+        window.open(window.location.href + 'PDF' + $(this).val(), '_blank');
+    });
+
 });

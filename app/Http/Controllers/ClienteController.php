@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Solicitud;
 use Illuminate\Http\Request;
 use App\Cliente;
 use Datatables;
@@ -84,6 +85,15 @@ class ClienteController extends Controller
     	$cliente = Cliente::find($id);
 
     	$cliente->delete();
+    }
+
+    public function verPdf($id_cliente){
+        $cliente = Cliente::find($id_cliente);
+        $solicitudes = Solicitud::where('cliente_id', $id_cliente)->orderBy('fecha')->get();
+
+        $pdf = \PDF::loadView('PDF.clientes',['cliente' => $cliente, 'solicitudes'=> $solicitudes]);
+
+        return $pdf->stream();
     }
 
 }

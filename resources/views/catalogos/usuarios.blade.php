@@ -84,6 +84,7 @@
 							<th>Correo</th>
 							<th>Modificar</th>
 							<th>Eliminar</th>
+							<th>Ver</th>
 						</tr>
 						</thead>
 						<tbody>
@@ -94,6 +95,7 @@
 								<td>{{$usuario->email}}</td>
 								<td><button type="button" class="boton_modificar btn btn-success"  data-toggle="modal" data-target="#modalModificar" value="{{$usuario->id}}">Editar</button></td>
 								<td><button  value="{{$usuario->id}}" type="button" class="btn btn-warning btn-circle btn-xl boton_eliminar"><i class="glyphicon glyphicon-remove"></i></button></td>
+								<td><button  value="{{$usuario->id}}" type="button" class="btn btn-default btn-PDF">PDF</button></td>
 							</tr>
 						@endforeach
 						</tbody>
@@ -181,7 +183,7 @@
 
 	<script type="text/javascript">
         $('#catalogos').attr('class', 'active');
-        $('#clientes').attr('class', 'active');
+        $('#usuarios').attr('class', 'active');
 	</script>
 
 

@@ -105,6 +105,7 @@
 							<th>IFE</th>
 							<th>Modificar</th>
 							<th>Eliminar</th>
+							<th>Ver</th>
 						</tr>
 						</thead>
 						<tbody>
@@ -118,6 +119,7 @@
 								<td>{{$cliente->ife}}</td>
 								<td><button type="button" class="boton_modificar btn btn-success"  data-toggle="modal" data-target="#modalModificar" value="{{$cliente->id}}">Editar</button></td>
 								<td><button  value="{{$cliente->id}}" type="button" class="btn btn-warning btn-circle btn-xl boton_eliminar"><i class="glyphicon glyphicon-remove"></i></button></td>
+								<td><button  value="{{$cliente->id}}" type="button" class="btn btn-default btn-PDF">PDF</button></td>
 							</tr>
 						@endforeach
 						</tbody>

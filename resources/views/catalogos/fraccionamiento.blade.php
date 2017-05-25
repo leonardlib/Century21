@@ -43,6 +43,7 @@
 							<th>Nombre</th>
 							<th>Modificar</th>
 							<th>Eliminar</th>
+							<th>Ver</th>
 						</tr>
 						</thead>
 						<tbody>
@@ -52,6 +53,7 @@
 								<td>{{$fracc->nombre}}</td>
 								<td><button type="button" class="boton_modificar btn btn-success"  data-toggle="modal" data-target="#modalModificar" value="{{$fracc->id}}">Editar</button></td>
 								<td><button  value="{{$fracc->id}}" type="button" class="btn btn-warning btn-circle btn-xl boton_eliminar"><i class="glyphicon glyphicon-remove"></i></button></td>
+								<td><button  value="{{$fracc->id}}" type="button" class="btn btn-default btn-PDF">PDF</button></td>
 							</tr>
 						@endforeach
 						</tbody>

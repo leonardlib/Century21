@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Cliente;
+use App\Solicitud;
 use Illuminate\Http\Request;
 use App\Fraccionamiento;
 use Datatables;
@@ -65,6 +67,14 @@ class FraccionamientoController extends Controller
     	$fraccionamiento = Fraccionamiento::find($id);
     	return $fraccionamiento;
     }
-    
+
+    public function verPdf($id_fraccionamiento){
+        $fraccionamiento = Fraccionamiento::find($id_fraccionamiento);
+        $solicitudes = Solicitud::where('fraccionamiento_id', $id_fraccionamiento)->orderBy('fecha')->get();
+
+        $pdf = \PDF::loadView('PDF.fraccionamiento',['solicitudes' => $solicitudes, 'fraccionamiento'=> $fraccionamiento]);
+
+        return $pdf->stream();
+    }
 
 }

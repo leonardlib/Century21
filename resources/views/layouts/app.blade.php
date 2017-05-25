@@ -63,18 +63,6 @@
                             <ul class="dropdown-menu">
                                 <li id="lista_solicitudes"><a href="{{url('/reportes/solicitudesR')}}">Lista de Solicitudes</a></li>
                                 <li id="saldos"><a href="{{url('/reportes/saldosR')}}">Saldos</a></li>
-                                <li id="estado_cuenta"><a href="{{url('/reportes/estado_cuentaR')}}">Estado de Cuenta</a></li>
-                                <li id="saldos_vencidos"><a href="{{url('/reportes/saldos_vencidosR')}}">Saldos Vencidos</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown" id="utilerias">
-                            <a class="dropdown-toogle" data-toggle="dropdown" href="#">
-                                Utilerias
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li id="respaldar_info"><a href="#">Respaldar Informacion</a></li>
-                                <li id="regenerar_indices"><a href="#">Regenerar Indices</a></li>
                             </ul>
                         </li>
                     </ul>

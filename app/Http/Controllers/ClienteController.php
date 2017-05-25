@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Solicitud;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Cliente;
 use Datatables;
@@ -90,8 +91,9 @@ class ClienteController extends Controller
     public function verPdf($id_cliente){
         $cliente = Cliente::find($id_cliente);
         $solicitudes = Solicitud::where('cliente_id', $id_cliente)->orderBy('fecha')->get();
+        $fecha = Carbon::now();
 
-        $pdf = \PDF::loadView('PDF.clientes',['cliente' => $cliente, 'solicitudes'=> $solicitudes]);
+        $pdf = \PDF::loadView('PDF.clientes',['cliente' => $cliente, 'solicitudes'=> $solicitudes, 'fecha' => $fecha]);
 
         return $pdf->stream();
     }

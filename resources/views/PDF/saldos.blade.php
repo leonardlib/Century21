@@ -44,7 +44,7 @@
 <pre>
 
 
-	<p><b>Fecha:</b> {{date('l jS \of F Y h:i:s A')}}</p>
+	<p><b>Fecha:</b> {{$fecha}}</p>
 
 	<p><b>Total Saldos:</b> {{$total}}</p>
 

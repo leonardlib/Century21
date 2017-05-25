@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\User;
 use Datatables;
@@ -58,8 +59,9 @@ class UsuarioController extends Controller{
 
     public function verPdf($id_usuario){
         $usuario = User::find($id_usuario);
+        $fecha = Carbon::now();
 
-        $pdf = \PDF::loadView('PDF.usuarios',['usuario' => $usuario]);
+        $pdf = \PDF::loadView('PDF.usuarios',['usuario' => $usuario, 'fecha' => $fecha]);
 
         return $pdf->stream();
     }

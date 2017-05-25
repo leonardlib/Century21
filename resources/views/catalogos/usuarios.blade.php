@@ -139,7 +139,7 @@
 								<div class="form-group">
 									<label for="inputNombre" class="col-sm-4 control-label">Nombre</label>
 									<div class="col-sm-8">
-										<input type="text" class="form-control" id="inputNombre" name="nombre" placeholder="Nombre">
+										<input type="text" class="form-control" id="inputNombre" name="name" placeholder="Nombre">
 									</div>
 								</div>
 							</div>
@@ -158,7 +158,7 @@
 								<div class="form-group">
 									<label for="inputPassword" class="col-sm-4 control-label">Nuevo Password</label>
 									<div class="col-sm-8">
-										<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+										<input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
 									</div>
 								</div>
 							</div>

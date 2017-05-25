@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 
 class ContratosController extends Controller {
     
-    public function index(Request $request) {
+    public function index() {
         $solicitudes = Solicitud::all();
         $fraccionamientos = Fraccionamiento::all();
         $contratos = Contratos::all();
@@ -64,5 +64,35 @@ class ContratosController extends Controller {
         }
 
         return redirect()->route('contratos.index');
+    }
+
+    public function editar(Request $request){
+        $id = $_POST['id'];
+
+        $contrato = Contratos::find($id);
+
+        $contrato->fill($request->all());
+
+        $contrato->save();
+
+        return redirect()->route('contratos.index');
+    }
+
+    public function eliminar(){
+        $id = $_POST['id'];
+
+        $solicitud = Contratos::find($id);
+
+        $solicitud->delete();
+
+        return redirect()->route('contratos.index');   
+    }
+
+    public function getContrato(){
+        $id = $_POST['id'];
+
+        $contrato = Contratos::find($id);
+
+        return $contrato;
     }
 }

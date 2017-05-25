@@ -26,13 +26,9 @@ class UsuarioController extends Controller{
     	
     	$usuario = User::find($id);
     	
-    	//Encriptar la contrasena
-    	$contrasena = bcrypt($request->contrasena);  	
-    	
-    	$nombre = $request->nombre;
-    	$correo = $request->correo;
-    	
-    	$usuario = User::fill(['name'=>$nombre,'email'=>$correo,'password'=>$contrasena]);
+    	$usuario->fill($request->all());
+
+        $usuario->save();
     	
     	return redirect()->route('usuarios.index');
     }

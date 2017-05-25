@@ -220,8 +220,9 @@
                         <thead>
                         <tr>
                             <th>#</th>
+                            <th>Solicitud</th>
                             <th>Nombre Cliente</th>
-                            <th>Fraccionamiento</th>
+                            <th>Fecha</th>
                             <th>Plazo</th>
                             <th>Monto Mensual ($)</th>
                             <th>Precio Total ($)</th>
@@ -231,8 +232,9 @@
                         @foreach($contratos as $contrato)
                             <tr>
                                 <td>{{$contrato->id}}</td>
+                                <td>{{$contrato->solicitud->id}}</td>
                                 <td>{{$contrato->solicitud->cliente->nombre}}</td>
-                                <td>{{$contrato->fraccionamiento->nombre}}</td>
+                                <td>{{$contrato->fecha}}</td>
                                 <td>{{$contrato->plazo}} meses</td>
                                 <td>{{$contrato->monto_mensual}}</td>
                                 <td>{{$contrato->saldo}}</td>
@@ -246,7 +248,7 @@
             </div>
         </div>
     </div>
-    <form action="solicitudes.editar" method="post">
+    <form action="contratos.editar" method="post">
         <div class="modal fade" id="modalModificar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
              aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
@@ -261,159 +263,26 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="input-solicitud" class="col-sm-6 control-label">Solicitud</label>
-                                    <div class="col-sm-6">
-                                        <select name="solicitud_id" class="form-control" id="input-solicitud">
-                                            <option value="0" selected>Ninguno</option>
-                                            @foreach($solicitudes as $solicitud)
-                                                <option value="{{$solicitud->id}}">{{$solicitud->id}}  -  {{$solicitud->cliente->nombre}} </option>
-                                            @endforeach
-                                        </select>
+                                    <label for="input-solicitud" class="col-sm-4 control-label">Solicitud</label>
+                                    <div class="col-sm-8">
+                                       <input type="number" name="solicitud" id="solicitud_id">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="input-fraccionamiento" class="col-sm-6 control-label">Fraccionamiento</label>
-                                    <div class="col-sm-6">
-                                        <select name="fraccionamiento_id" class="form-control" id="input-fraccionamiento" disabled>
-                                            <option value="0" selected>Ninguno</option>
-                                            @foreach($solicitudes as $solicitud)
-                                                <option value="{{$solicitud->id}}"> {{ $solicitud->fraccionamiento->nombre }} </option>
-                                            @endforeach
-                                        </select>
+                                    <label for="input-saldo" class="col-sm-4 control-label">Precio total $</label>
+                                    <div class="col-sm-8">
+                                        <input type="number" name="saldo" id="saldo_id">
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="input-cliente" class="col-sm-6 control-label">Cliente</label>
-                                    <div class="col-sm-6">
-                                        <select name="cliente_id" class="form-control" id="input-cliente" disabled>
-                                            <option value="0" selected>Ninguno</option>
-                                            @foreach($solicitudes as $solicitud)
-                                                <option value="{{$solicitud->id}}"> {{ $solicitud->cliente->nombre }} </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="input-lote" class="col-sm-6 control-label">Lote</label>
-                                    <div class="col-sm-6">
-                                        <select name="no_lote" class="form-control" id="input-lote" disabled>
-                                            <option value="0" selected>Ninguno</option>
-                                            @foreach($solicitudes as $solicitud)
-                                                <option value="{{$solicitud->id}}"> {{ $solicitud->no_lote }} </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="input-manzana" class="col-sm-6 control-label">Manzana</label>
-                                    <div class="col-sm-6">
-                                        <select name="manzana" class="form-control" id="input-manzana" disabled>
-                                            <option value="0" selected>Ninguno</option>
-                                            @foreach($solicitudes as $solicitud)
-                                                <option value="{{$solicitud->id}}"> {{ $solicitud->manzana }} </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="input-frente" class="col-sm-6 control-label">Frente (mt)</label>
-                                    <div class="col-sm-6">
-                                        <select name="frente" class="form-control" id="input-frente" disabled>
-                                            <option value="0" selected>Ninguno</option>
-                                            @foreach($solicitudes as $solicitud)
-                                                <option value="{{$solicitud->id}}"> {{ $solicitud->frente }} </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="input-fondo" class="col-sm-6 control-label">Fondo (mt)</label>
-                                    <div class="col-sm-6">
-                                        <select name="fondo" class="form-control" id="input-fondo" disabled>
-                                            <option value="0" selected>Ninguno</option>
-                                            @foreach($solicitudes as $solicitud)
-                                                <option value="{{$solicitud->id}}"> {{ $solicitud->fondo }} </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="input-superficie" class="col-sm-6 control-label">Superficie (mt<sup>2</sup>)</label>
-                                    <div class="col-sm-6">
-                                        <select name="superficie" class="form-control" id="input-superficie" disabled>
-                                            <option value="0" selected>Ninguno</option>
-                                            @foreach($solicitudes as $solicitud)
-                                                <option value="{{$solicitud->id}}"> {{ $solicitud->superficie }} </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="input-precio-metro" class="col-sm-6 control-label">Precio por metro $</label>
-                                    <div class="col-sm-6">
-                                        <select name="precio_metro" class="form-control" id="input-precio-metro" disabled>
-                                            <option value="0" selected>Ninguno</option>
-                                            @foreach($solicitudes as $solicitud)
-                                                <option value="{{$solicitud->id}}"> {{ $solicitud->precio_metro }} </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="input-enganche" class="col-sm-6 control-label">Enganche (%)</label>
-                                    <div class="col-sm-6">
-                                        <select name="enganche" class="form-control" id="input-enganche" disabled>
-                                            <option value="0" selected>Ninguno</option>
-                                            @foreach($solicitudes as $solicitud)
-                                                <option value="{{$solicitud->id}}"> {{ $solicitud->enganche }} </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="input-precio-total" class="col-sm-6 control-label">Precio total $</label>
-                                    <div class="col-sm-6">
-                                        <select name="precio_total" class="form-control" id="input-precio-total" disabled>
-                                            <option value="0" selected>Ninguno</option>
-                                            @foreach($solicitudes as $solicitud)
-                                                <option value="{{$solicitud->id}}"> {{ $solicitud->precio_total }} </option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <br>
-                        <hr>
-                        <br>
                         <div class="row">
-                            <div class="col-md-6"></div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="input-fecha-contrato" class="col-sm-4 control-label">Fecha</label>
@@ -423,34 +292,22 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
                         <div class="row">
-                            <div class="col-md-4">
+    
+                            <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="input-saldo" class="col-sm-6 control-label">Precio total $</label>
-                                    <div class="col-sm-6">
-                                        <select name="saldo" class="form-control" id="input-saldo" disabled>
-                                            <option value="0" selected>Ninguno</option>
-                                            @foreach($solicitudes as $solicitud)
-                                                <option value="{{$solicitud->id}}"> {{ $solicitud->precio_total }} </option>
-                                            @endforeach
-                                        </select>
-                                        <input type="hidden" name="saldo-1" id="input-saldo-1">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="input-plazo" class="col-sm-6 control-label">Plazo en meses</label>
-                                    <div class="col-sm-6">
+                                    <label for="input-plazo" class="col-sm-4 control-label">Plazo en meses</label>
+                                    <div class="col-sm-8">
                                         <input type="number" name="plazo" id="input-plazo" class="form-control">
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="input-mensualidad" class="col-sm-6 control-label">Mensualidades de $</label>
-                                    <div class="col-sm-6">
-                                        <input type="number" name="monto_mensual" id="input-mensualidad" class="form-control" readonly>
+                                    <label for="input-mensualidad" class="col-sm-4 control-label">Mensualidades de $</label>
+                                    <div class="col-sm-8">
+                                        <input type="number" name="monto_mensual" id="input-mensualidad" class="form-control" >
                                     </div>
                                 </div>
                             </div>

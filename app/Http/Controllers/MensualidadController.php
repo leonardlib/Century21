@@ -50,4 +50,11 @@ class MensualidadController extends Controller
             'mensualidades' => $mensualidades_pagar
         ]);
     }
+
+    public function getMensualidad(){
+
+        $id = $_POST['id'];
+
+        return Mensualidad::find($id);
+    }
 }
